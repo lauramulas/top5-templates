@@ -318,21 +318,41 @@ template {
     mix-blend-mode: normal;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
     transition: all 0.4s ease; }
+    .ranking-table .partner-row.--labels {
+      display: none;
+      height: 20px !important;
+      border-radius: 0;
+      background-color: transparent !important;
+      box-shadow: none;
+      margin-bottom: 10px; }
+      .ranking-table .partner-row.--labels .image, .ranking-table .partner-row.--labels .information, .ranking-table .partner-row.--labels .rating, .ranking-table .partner-row.--labels .score, .ranking-table .partner-row.--labels .link {
+        display: flex;
+        height: 20px;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        font-weight: bold; }
+        .ranking-table .partner-row.--labels .image .label, .ranking-table .partner-row.--labels .information .label, .ranking-table .partner-row.--labels .rating .label, .ranking-table .partner-row.--labels .score .label, .ranking-table .partner-row.--labels .link .label {
+          color: #fff;
+          font-size: 14px;
+          text-transform: uppercase; }
     .ranking-table .partner-row.--toprank > .underline {
       background-color: #af4034; }
     .ranking-table .partner-row > .divider {
       display: flex;
-      position: relative;
       min-width: 1px;
       height: 80%;
       background-color: rgba(196, 196, 196, 0.3); }
     .ranking-table .partner-row > .image {
       display: flex;
-      align-items: center; }
+      align-items: center;
+      min-width: 50px;
+      max-width: 50px;
+      height: 50px;
+      transition: all 0.4s; }
       .ranking-table .partner-row > .image img {
-        transition: all 0.4s;
-        width: 50px;
-        height: 50px;
+        width: 100%;
+        height: 100%;
         object-fit: contain; }
     .ranking-table .partner-row > .information {
       width: 100%;
@@ -342,6 +362,7 @@ template {
       justify-content: center;
       height: 100%; }
       .ranking-table .partner-row > .information .name {
+        text-transform: capitalize;
         margin-bottom: 5px;
         color: #333333;
         font-weight: bold;
@@ -365,6 +386,35 @@ template {
         font-weight: bold;
         text-decoration: underline;
         text-transform: capitalize; }
+    .ranking-table .partner-row > .rating {
+      padding: 0 10px;
+      display: none;
+      position: relative;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 30%;
+      height: 100%; }
+      .ranking-table .partner-row > .rating .star-rating {
+        display: flex;
+        flex-direction: row;
+        justify-content: center; }
+        .ranking-table .partner-row > .rating .star-rating .star {
+          margin: 0;
+          width: 18px;
+          height: 18px; }
+      .ranking-table .partner-row > .rating .ratings {
+        text-align: center;
+        color: #8c8c8c;
+        color: #333333;
+        font-size: 14px; }
+      .ranking-table .partner-row > .rating > .divider {
+        position: absolute;
+        right: 0;
+        display: flex;
+        min-width: 1px;
+        height: 80%;
+        background-color: rgba(196, 196, 196, 0.3); }
     .ranking-table .partner-row > .score {
       width: 30%;
       display: flex;
@@ -413,23 +463,34 @@ template {
       border-radius: 0 0 5px 5px; }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  .ranking-table .partner-row {
-    height: 120px;
-    padding: 0 20px 5px 20px; }
-    .ranking-table .partner-row > .image img {
-      width: 90px;
-      height: 90px; }
-    .ranking-table .partner-row > .information .name {
-      font-size: 28px; }
-    .ranking-table .partner-row > .information .membercount {
-      font-size: 12px;
-      font-weight: bold;
-      text-transform: uppercase; }
-    .ranking-table .partner-row > .information .tag, .ranking-table .partner-row > .information .link {
-      font-size: 14px;
+  .ranking-table {
+    padding: 20px; }
+    .ranking-table > .partner-row.--labels {
       display: flex; }
-    .ranking-table .partner-row .underline {
-      height: 5px; } }
+    .ranking-table > .partner-row {
+      height: 120px;
+      padding: 0 20px 5px 20px; }
+      .ranking-table > .partner-row > .image {
+        min-width: 90px;
+        height: 90px; }
+      .ranking-table > .partner-row > .information .name {
+        font-size: 28px; }
+      .ranking-table > .partner-row > .information .membercount {
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 5px; }
+      .ranking-table > .partner-row > .information .tag, .ranking-table > .partner-row > .information .link {
+        font-size: 14px;
+        display: flex; }
+      .ranking-table > .partner-row > .rating {
+        display: flex; }
+      .ranking-table > .partner-row > .score {
+        height: 100%; }
+        .ranking-table > .partner-row > .score .star-rating {
+          display: none; }
+      .ranking-table > .partner-row > .underline {
+        height: 5px; } }
 @media (min-width: 1024px) {
   .ranking-table .partner-row {
     height: 180px; } }
