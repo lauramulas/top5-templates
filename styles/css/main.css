@@ -659,7 +659,7 @@ template {
           height: 25px; }
           .ranking-table > .partner-row.--labels .image .label, .ranking-table > .partner-row.--labels .information .label, .ranking-table > .partner-row.--labels .rating .label, .ranking-table > .partner-row.--labels .score .label, .ranking-table > .partner-row.--labels .link .label {
             font-size: 16px; }
-      .ranking-table > .partner-row > .banner {
+      .ranking-table > .partner-row > .banner.--show {
         display: flex; }
       .ranking-table > .partner-row > .underline {
         height: 5px; }
