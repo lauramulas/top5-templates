@@ -368,6 +368,7 @@ template {
         .ranking-table .partner-row.--labels .rating .label, .ranking-table .partner-row.--labels .score .label {
           cursor: pointer; }
         .ranking-table .partner-row.--labels .rating .arrow, .ranking-table .partner-row.--labels .score .arrow {
+          cursor: pointer;
           height: 15px;
           width: 15px;
           margin-left: 5px; }
