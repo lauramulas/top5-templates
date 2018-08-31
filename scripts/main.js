@@ -1,7 +1,6 @@
 var readmoreBtn = document.querySelectorAll('.ranking-table .partner-row .information .link')
 
 readmoreBtn.forEach(function(el, i) {
-  console.log(true);
 
   var parentRow = el.parentElement.parentElement;
   var height = parentRow.scrollHeight;

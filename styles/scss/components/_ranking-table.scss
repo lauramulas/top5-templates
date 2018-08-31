@@ -1,6 +1,14 @@
+.hero-bg {
+  height: 100px;
+  background-color: $red;
+  position: absolute;
+  width: 100%;
+  transition: all 0.4s ease;
+}
+
 .ranking-table {
   padding: 10px;
-  background-color: lightgrey;
+  background-color: $white;
 
   .partner-row {
     position: relative;
@@ -12,48 +20,25 @@
     padding: 0 10px 3px 10px;
     background-color: white;
     mix-blend-mode: normal;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 4px 4px 24px rgba(0, 0, 0, 0.25);
     margin-bottom: 20px;
-
+    min-width: 300px;
     transition: all 0.4s ease;
 
     // Expanded Row Styles
     &.--expand {
-      // min-height: 160px;
-      // height: 100%;
-      // padding: 20px 20px 23px 20px;
 
       .divider {
         height: 60% !important;
       }
 
       > .information {
-        // margin-top: 10px;
-        // padding: 0 20px;
-        .name {
-
-          // position: absolute;
-          // left: 20px;
-          // top: 20%;
-          // transform: translateX(-120px) translateY(50%);
-        }
+        padding: 10px;
 
         .tag, .membercount {
           overflow: unset;
-
           text-overflow: inherit;
-          // display: -webkit-box;
           -webkit-line-clamp: 99;
-          // -webkit-box-orient: vertical;
-        }
-
-        .link {
-          // opacity: 0;
-        }
-
-        .info {
-          // display: flex;
-
         }
       }
     }
@@ -132,9 +117,9 @@
     > .divider {
       display: flex;
       min-width: 1px;
-      // height: 120px;
       height: 80%;
       background-color: $lightgrey;
+      transition: all 0.4s ease;
     }
 
     // Partner Image
@@ -142,10 +127,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      // border: 1px solid gold;
-
-      // height: 100% !important;
-
       min-width: 50px;
       max-width: 50px;
       height: 50px;
@@ -162,34 +143,28 @@
 
     // Partner Information
     > .information {
-      // position: relative;
-      // margin-top: 10px;
       width: 100%;
-      padding: 10px 10px 5px 10px;
+      min-width: 100px;
+      padding: 10px;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
+      justify-content: center;
       height: 100%;
-
       transition: all 0.4s ease;
 
       .name {
         transition: all 0.4s ease;
-
         cursor: pointer;
-        text-transform: capitalize;
         margin-bottom: 5px;
         color: $black;
         font-weight: bold;
-        font-size: 26px;
+        font-size: 22px;
       }
 
       .membercount {
         transition: all 0.4s ease;
-
         color: $grey;
         font-size: 10px;
-        // font-weight: bold;
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
@@ -200,7 +175,6 @@
       // (Partner Info and 'Read More') - Tablet and Desktop styles
       .tag, .link {
         transition: all 0.4s ease;
-
         display: none;
       }
 
@@ -220,15 +194,15 @@
       }
 
       .info {
-        // display: none;
         max-height: 0;
         overflow: hidden;
         margin-left: -20px;
         font-size: 14px;
+        color: $black;
         transition: max-height 0.4s ease;
 
-        ul {
-          // padding: 5px 0;
+        ul li {
+          padding-bottom: 8px;
         }
       }
     }
@@ -242,7 +216,6 @@
       justify-content: center;
       align-items: center;
       width: 30%;
-
       height: 100%;
 
       .star-rating {
@@ -276,7 +249,6 @@
 
     // Our Score
     > .score {
-      // height: 100%;
       width: 30%;
       display: flex;
       flex-direction: column;
@@ -354,6 +326,10 @@
         margin-top: 10px;
         font-size: 16px;
         color: $grey;
+
+        > span {
+          margin-left: 4px;
+        }
       }
     }
   }
@@ -363,15 +339,27 @@
 
 // Breakpoints Tablet ==========================================================
 @include tablet {
+  .hero-bg {
+    height: 120px;
+  }
+
   .ranking-table {
     padding: 20px;
 
     > .partner-row.--labels {
       display: flex;
+
+      .rating, .score{
+        .arrow {
+          height: 12px;
+          width: 12px;
+          margin-left: 5px;
+        }
+      }
     }
 
     > .partner-row {
-      height: 125px;
+      height: 130px;
       padding: 0 20px 5px 20px;
 
 
@@ -397,6 +385,12 @@
           font-weight: bold;
           text-transform: uppercase;
           margin-bottom: 5px;
+
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
         }
 
         .tag, .link {
@@ -456,12 +450,26 @@
 
 // Breakpoints Desktop =========================================================
 @include desktop {
+  .hero-bg {
+    height: 200px;
+  }
+
   .ranking-table {
     padding: 40px 40px;
 
     > .partner-row {
       height: 160px;
       padding: 0 20px 5px 20px;
+
+      &.--expand {
+        > .information {
+          padding: 10px 20px;
+
+          .info {
+            font-size: 16px;
+          }
+        }
+      }
 
       &.--labels {
         .image, .information, .rating, .score, .link {
@@ -471,13 +479,6 @@
             font-size: 16px;
           }
         }
-
-        // .rating, .score {
-        //   width: 30%;
-        // }
-        // .link {
-        //   width: 20%;
-        // }
       }
 
       .image, .information, .rating, .score, .link {
@@ -500,7 +501,7 @@
 
       // Partner Information
       > .information {
-        padding: 0 20px 0 20px;
+        padding: 10px 20px;
 
         .name {
           font-size: 32px;
@@ -527,6 +528,10 @@
           display: flex;
           font-size: 14px;
           font-weight: bold;
+        }
+
+        .info {
+          font-size: 16px;
         }
       }
 
@@ -576,7 +581,6 @@
 
         .text {
           margin-top: 24px;
-          // white-space: nowrap;
           color: white;
           padding: 12px 20px;
           background-color: $red;
@@ -586,17 +590,13 @@
           font-size: 16px;
           font-weight: bold;
           text-transform: uppercase;
-          // text-transform: capitalize;
           text-decoration: none;
 
           box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
           // box-shadow: 0px 0px 20px rgba(175, 64, 52, 0.8);
 
-
           .arrow {
-            // display: flex;
             margin-top: 2px;
-            // margin-left: -10px;
             margin-right: -10px;
             width: 10px;
             height: 15px;

@@ -311,9 +311,16 @@ template {
 [hidden] {
   display: none; }
 
+.hero-bg {
+  height: 100px;
+  background-color: #af4034;
+  position: absolute;
+  width: 100%;
+  transition: all 0.4s ease; }
+
 .ranking-table {
   padding: 10px;
-  background-color: lightgrey; }
+  background-color: #fff; }
   .ranking-table .partner-row {
     position: relative;
     height: 80px;
@@ -324,15 +331,18 @@ template {
     padding: 0 10px 3px 10px;
     background-color: white;
     mix-blend-mode: normal;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 4px 4px 24px rgba(0, 0, 0, 0.25);
     margin-bottom: 20px;
+    min-width: 300px;
     transition: all 0.4s ease; }
     .ranking-table .partner-row.--expand .divider {
       height: 60% !important; }
-    .ranking-table .partner-row.--expand > .information .tag, .ranking-table .partner-row.--expand > .information .membercount {
-      overflow: unset;
-      text-overflow: inherit;
-      -webkit-line-clamp: 99; }
+    .ranking-table .partner-row.--expand > .information {
+      padding: 10px; }
+      .ranking-table .partner-row.--expand > .information .tag, .ranking-table .partner-row.--expand > .information .membercount {
+        overflow: unset;
+        text-overflow: inherit;
+        -webkit-line-clamp: 99; }
     .ranking-table .partner-row.--labels {
       display: none;
       height: 20px !important;
@@ -375,7 +385,8 @@ template {
       display: flex;
       min-width: 1px;
       height: 80%;
-      background-color: rgba(196, 196, 196, 0.3); }
+      background-color: rgba(196, 196, 196, 0.3);
+      transition: all 0.4s ease; }
     .ranking-table .partner-row > .image {
       display: flex;
       flex-direction: column;
@@ -391,20 +402,20 @@ template {
         object-fit: contain; }
     .ranking-table .partner-row > .information {
       width: 100%;
-      padding: 10px 10px 5px 10px;
+      min-width: 100px;
+      padding: 10px;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
+      justify-content: center;
       height: 100%;
       transition: all 0.4s ease; }
       .ranking-table .partner-row > .information .name {
         transition: all 0.4s ease;
         cursor: pointer;
-        text-transform: capitalize;
         margin-bottom: 5px;
         color: #333333;
         font-weight: bold;
-        font-size: 26px; }
+        font-size: 22px; }
       .ranking-table .partner-row > .information .membercount {
         transition: all 0.4s ease;
         color: #8c8c8c;
@@ -433,7 +444,10 @@ template {
         overflow: hidden;
         margin-left: -20px;
         font-size: 14px;
+        color: #333333;
         transition: max-height 0.4s ease; }
+        .ranking-table .partner-row > .information .info ul li {
+          padding-bottom: 8px; }
     .ranking-table .partner-row > .rating {
       padding: 0 10px;
       display: none;
@@ -523,14 +537,23 @@ template {
         margin-top: 10px;
         font-size: 16px;
         color: #8c8c8c; }
+        .ranking-table .partner-row > .link .name > span {
+          margin-left: 4px; }
 
 @media (min-width: 768px) and (max-width: 1023px) {
+  .hero-bg {
+    height: 120px; }
+
   .ranking-table {
     padding: 20px; }
     .ranking-table > .partner-row.--labels {
       display: flex; }
+      .ranking-table > .partner-row.--labels .rating .arrow, .ranking-table > .partner-row.--labels .score .arrow {
+        height: 12px;
+        width: 12px;
+        margin-left: 5px; }
     .ranking-table > .partner-row {
-      height: 125px;
+      height: 130px;
       padding: 0 20px 5px 20px; }
       .ranking-table > .partner-row > .underline {
         height: 5px; }
@@ -543,7 +566,12 @@ template {
         font-size: 12px;
         font-weight: bold;
         text-transform: uppercase;
-        margin-bottom: 5px; }
+        margin-bottom: 5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical; }
       .ranking-table > .partner-row > .information .tag, .ranking-table > .partner-row > .information .link {
         display: flex; }
       .ranking-table > .partner-row > .information .tag {
@@ -571,11 +599,18 @@ template {
           font-size: 12px;
           text-transform: capitalize; } }
 @media (min-width: 1024px) {
+  .hero-bg {
+    height: 200px; }
+
   .ranking-table {
     padding: 40px 40px; }
     .ranking-table > .partner-row {
       height: 160px;
       padding: 0 20px 5px 20px; }
+      .ranking-table > .partner-row.--expand > .information {
+        padding: 10px 20px; }
+        .ranking-table > .partner-row.--expand > .information .info {
+          font-size: 16px; }
       .ranking-table > .partner-row.--labels .image, .ranking-table > .partner-row.--labels .information, .ranking-table > .partner-row.--labels .rating, .ranking-table > .partner-row.--labels .score, .ranking-table > .partner-row.--labels .link {
         height: 25px; }
         .ranking-table > .partner-row.--labels .image .label, .ranking-table > .partner-row.--labels .information .label, .ranking-table > .partner-row.--labels .rating .label, .ranking-table > .partner-row.--labels .score .label, .ranking-table > .partner-row.--labels .link .label {
@@ -590,7 +625,7 @@ template {
         min-width: 100px;
         height: 100px; }
       .ranking-table > .partner-row > .information {
-        padding: 0 20px 0 20px; }
+        padding: 10px 20px; }
         .ranking-table > .partner-row > .information .name {
           font-size: 32px; }
         .ranking-table > .partner-row > .information .membercount {
@@ -610,6 +645,8 @@ template {
           display: flex;
           font-size: 14px;
           font-weight: bold; }
+        .ranking-table > .partner-row > .information .info {
+          font-size: 16px; }
       .ranking-table > .partner-row > .rating {
         padding: 0 10px;
         display: flex; }
