@@ -374,6 +374,47 @@ template {
           margin-left: 5px; }
     .ranking-table .partner-row.--toprank > .underline {
       background-color: #af4034; }
+    .ranking-table .partner-row > .banner {
+      display: none;
+      position: absolute;
+      left: -20px;
+      bottom: 40px;
+      background-color: transparent; }
+      .ranking-table .partner-row > .banner .block {
+        height: 24px;
+        z-index: 1;
+        border-bottom-left-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: skyblue; }
+        .ranking-table .partner-row > .banner .block .text {
+          text-transform: capitalize;
+          color: #fff;
+          font-weight: bold;
+          font-size: 12px;
+          padding-left: 10px;
+          padding-right: 25px; }
+      .ranking-table .partner-row > .banner .triangle {
+        position: absolute;
+        bottom: 24px;
+        width: 0;
+        height: 0x;
+        border-left: 20px solid transparent;
+        border-bottom: 20px solid skyblue;
+        z-index: 0; }
+        .ranking-table .partner-row > .banner .triangle.--overlay {
+          z-index: 1;
+          border-left: 20px solid transparent;
+          border-bottom: 20px solid rgba(0, 0, 0, 0.3); }
+      .ranking-table .partner-row > .banner .cap {
+        z-index: 1;
+        right: -1px;
+        position: absolute;
+        border-right: 18px solid white;
+        border-bottom: 12px solid transparent;
+        border-top: 12px solid transparent;
+        width: 0; }
     .ranking-table .partner-row > .underline {
       position: absolute;
       bottom: 0;
@@ -612,16 +653,16 @@ template {
         padding: 10px 20px; }
         .ranking-table > .partner-row.--expand > .information .info {
           font-size: 16px; }
-      .ranking-table > .partner-row.--labels .image, .ranking-table > .partner-row.--labels .information, .ranking-table > .partner-row.--labels .rating, .ranking-table > .partner-row.--labels .score, .ranking-table > .partner-row.--labels .link {
-        height: 25px; }
-        .ranking-table > .partner-row.--labels .image .label, .ranking-table > .partner-row.--labels .information .label, .ranking-table > .partner-row.--labels .rating .label, .ranking-table > .partner-row.--labels .score .label, .ranking-table > .partner-row.--labels .link .label {
-          font-size: 16px; }
-      .ranking-table > .partner-row .image, .ranking-table > .partner-row .information, .ranking-table > .partner-row .rating, .ranking-table > .partner-row .score, .ranking-table > .partner-row .link {
-        min-width: 14%; }
-      .ranking-table > .partner-row > .underline {
-        height: 5px; }
       .ranking-table > .partner-row.--labels {
         display: flex; }
+        .ranking-table > .partner-row.--labels .image, .ranking-table > .partner-row.--labels .information, .ranking-table > .partner-row.--labels .rating, .ranking-table > .partner-row.--labels .score, .ranking-table > .partner-row.--labels .link {
+          height: 25px; }
+          .ranking-table > .partner-row.--labels .image .label, .ranking-table > .partner-row.--labels .information .label, .ranking-table > .partner-row.--labels .rating .label, .ranking-table > .partner-row.--labels .score .label, .ranking-table > .partner-row.--labels .link .label {
+            font-size: 16px; }
+      .ranking-table > .partner-row > .banner {
+        display: flex; }
+      .ranking-table > .partner-row > .underline {
+        height: 5px; }
       .ranking-table > .partner-row > .image {
         min-width: 100px;
         height: 100px; }

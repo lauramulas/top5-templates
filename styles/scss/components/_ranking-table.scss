@@ -47,7 +47,6 @@
     &.--labels {
       display: none;
       height: 20px !important;
-      // border: 1px solid gold;
       border-radius: 0;
       background-color: transparent !important;
       box-shadow: none;
@@ -57,18 +56,12 @@
         margin: 0;
         display: flex;
         height: 20px;
-        // border: 1px solid red;
-
         align-items: flex-start;
-        // flex-direction: column;
         justify-content: center;
         font-weight: bold;
 
         .label {
-          // border: 1px solid green;
-          // height: 100%;
           color: $white;
-          // text-align: left;
           font-size: 14px;
           text-transform: uppercase;
         }
@@ -97,13 +90,59 @@
       }
     }
 
-    //===========================================
-    //===========================================
-    .image, .information, .rating, .score, .link {
-      // border: 1px solid skyblue;
+    > .banner {
+      display: none;
+      position: absolute;
+      left: -20px;
+      bottom: 40px;
+      background-color: transparent;
+      // box-shadow: 0px 0px 10px rgba(175, 64, 52, 0.8);
+      .block {
+        height: 24px;
+        z-index: 1;
+        // border: 2px solid gold;
+        border-bottom-left-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // box-shadow: 0px 0px 10px rgba(175, 64, 52, 0.8);
+        background-color: skyblue;
+        .text {
+          // border-radius:
+          // padding: 4px 8px;
+          text-transform: capitalize;
+          color: $white;
+          font-weight: bold;
+          font-size: 12px;
+          padding-left: 10px;
+          padding-right: 25px;
+        }
+      }
+      .triangle {
+        position: absolute;
+        bottom: 24px;
+        width: 0;
+        height: 0x;
+        border-left: 20px solid transparent;
+        border-bottom: 20px solid skyblue;
+        z-index: 0;
+
+        &.--overlay {
+          z-index: 1;
+          border-left: 20px solid transparent;
+          border-bottom: 20px solid rgba(0, 0, 0, 0.3);
+        }
+      }
+      .cap {
+        z-index: 1;
+        right: -1px;
+        position: absolute;
+        border-right: 18px solid white;
+        border-bottom: 12px solid transparent;
+        border-top: 12px solid transparent;
+        width: 0;
+      }
     }
-    //===========================================
-    //===========================================
 
     > .underline {
       position: absolute;
@@ -473,6 +512,7 @@
       }
 
       &.--labels {
+        display: flex;
         .image, .information, .rating, .score, .link {
           height: 25px;
 
@@ -483,15 +523,15 @@
       }
 
       .image, .information, .rating, .score, .link {
-        min-width: 14%;
+        // min-width: 14%;
+      }
+
+      > .banner {
+        display: flex;
       }
 
       > .underline {
         height: 5px;
-      }
-
-      &.--labels {
-        display: flex;
       }
 
       // Partner Image
