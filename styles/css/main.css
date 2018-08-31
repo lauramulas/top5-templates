@@ -1,8 +1,16 @@
 * {
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box; }
 
 p {
   margin: 0; }
+
+html {
+  height: 100%; }
+
+body {
+  height: 100%; }
 
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -317,7 +325,14 @@ template {
     background-color: white;
     mix-blend-mode: normal;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    margin-bottom: 20px;
     transition: all 0.4s ease; }
+    .ranking-table .partner-row.--expand .divider {
+      height: 60% !important; }
+    .ranking-table .partner-row.--expand > .information .tag, .ranking-table .partner-row.--expand > .information .membercount {
+      overflow: unset;
+      text-overflow: inherit;
+      -webkit-line-clamp: 99; }
     .ranking-table .partner-row.--labels {
       display: none;
       height: 20px !important;
@@ -326,18 +341,36 @@ template {
       box-shadow: none;
       margin-bottom: 10px; }
       .ranking-table .partner-row.--labels .image, .ranking-table .partner-row.--labels .information, .ranking-table .partner-row.--labels .rating, .ranking-table .partner-row.--labels .score, .ranking-table .partner-row.--labels .link {
+        margin: 0;
         display: flex;
         height: 20px;
         align-items: flex-start;
-        flex-direction: column;
         justify-content: center;
         font-weight: bold; }
         .ranking-table .partner-row.--labels .image .label, .ranking-table .partner-row.--labels .information .label, .ranking-table .partner-row.--labels .rating .label, .ranking-table .partner-row.--labels .score .label, .ranking-table .partner-row.--labels .link .label {
           color: #fff;
           font-size: 14px;
           text-transform: uppercase; }
+      .ranking-table .partner-row.--labels .rating, .ranking-table .partner-row.--labels .score {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center; }
+        .ranking-table .partner-row.--labels .rating .label, .ranking-table .partner-row.--labels .score .label {
+          cursor: pointer; }
+        .ranking-table .partner-row.--labels .rating .arrow, .ranking-table .partner-row.--labels .score .arrow {
+          height: 15px;
+          width: 15px;
+          margin-left: 5px; }
     .ranking-table .partner-row.--toprank > .underline {
       background-color: #af4034; }
+    .ranking-table .partner-row > .underline {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 0 0 5px 5px; }
     .ranking-table .partner-row > .divider {
       display: flex;
       min-width: 1px;
@@ -345,6 +378,7 @@ template {
       background-color: rgba(196, 196, 196, 0.3); }
     .ranking-table .partner-row > .image {
       display: flex;
+      flex-direction: column;
       align-items: center;
       min-width: 50px;
       max-width: 50px;
@@ -353,21 +387,26 @@ template {
       .ranking-table .partner-row > .image img {
         width: 100%;
         height: 100%;
+        cursor: pointer;
         object-fit: contain; }
     .ranking-table .partner-row > .information {
       width: 100%;
-      padding: 0 10px;
+      padding: 10px 10px 5px 10px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      height: 100%; }
+      justify-content: flex-start;
+      height: 100%;
+      transition: all 0.4s ease; }
       .ranking-table .partner-row > .information .name {
+        transition: all 0.4s ease;
+        cursor: pointer;
         text-transform: capitalize;
         margin-bottom: 5px;
         color: #333333;
         font-weight: bold;
         font-size: 26px; }
       .ranking-table .partner-row > .information .membercount {
+        transition: all 0.4s ease;
         color: #8c8c8c;
         font-size: 10px;
         overflow: hidden;
@@ -376,16 +415,25 @@ template {
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical; }
       .ranking-table .partner-row > .information .tag, .ranking-table .partner-row > .information .link {
+        transition: all 0.4s ease;
         display: none; }
       .ranking-table .partner-row > .information .tag {
-        font-size: 16px;
+        font-size: 14px;
         color: #333333;
         margin-bottom: 5px; }
       .ranking-table .partner-row > .information .link {
+        font-size: 13px;
         color: #af4034;
         font-weight: bold;
         text-decoration: underline;
-        text-transform: capitalize; }
+        text-transform: capitalize;
+        cursor: pointer; }
+      .ranking-table .partner-row > .information .info {
+        max-height: 0;
+        overflow: hidden;
+        margin-left: -20px;
+        font-size: 14px;
+        transition: max-height 0.4s ease; }
     .ranking-table .partner-row > .rating {
       padding: 0 10px;
       display: none;
@@ -396,9 +444,11 @@ template {
       width: 30%;
       height: 100%; }
       .ranking-table .partner-row > .rating .star-rating {
+        cursor: pointer;
         display: flex;
         flex-direction: row;
-        justify-content: center; }
+        justify-content: center;
+        margin-bottom: 5px; }
         .ranking-table .partner-row > .rating .star-rating .star {
           margin: 0;
           width: 18px;
@@ -406,7 +456,6 @@ template {
       .ranking-table .partner-row > .rating .ratings {
         text-align: center;
         color: #8c8c8c;
-        color: #333333;
         font-size: 14px; }
       .ranking-table .partner-row > .rating > .divider {
         position: absolute;
@@ -419,12 +468,14 @@ template {
       width: 30%;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       padding: 0 5px; }
       .ranking-table .partner-row > .score .number {
         text-align: center;
-        font-size: 30px;
+        font-size: 28px;
         font-weight: bold;
-        color: #333333; }
+        color: #333333;
+        cursor: pointer; }
       .ranking-table .partner-row > .score .star-rating {
         display: flex;
         flex-direction: row;
@@ -437,6 +488,15 @@ template {
         text-align: center;
         font-size: 10px;
         color: #8c8c8c; }
+      .ranking-table .partner-row > .score .link {
+        cursor: pointer;
+        display: none;
+        text-align: center;
+        font-size: 13px;
+        color: #af4034;
+        font-weight: bold;
+        text-decoration: underline;
+        text-transform: capitalize; }
     .ranking-table .partner-row > .link {
       width: 30%;
       display: flex;
@@ -444,23 +504,25 @@ template {
       flex-direction: column;
       align-items: center;
       padding: 0 0 0 5px; }
-      .ranking-table .partner-row > .link .arrow {
-        margin-bottom: 5px; }
+      .ranking-table .partner-row > .link > .arrow {
+        margin-bottom: 5px;
+        cursor: pointer; }
       .ranking-table .partner-row > .link .text {
+        cursor: pointer;
         text-align: center;
         font-size: 8px;
         font-weight: bold;
         text-transform: uppercase;
         color: #af4034;
         text-decoration: underline; }
-    .ranking-table .partner-row > .underline {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      height: 3px;
-      width: 100%;
-      background-color: #fff;
-      border-radius: 0 0 5px 5px; }
+        .ranking-table .partner-row > .link .text > .arrow {
+          display: none; }
+      .ranking-table .partner-row > .link .name {
+        cursor: pointer;
+        display: none;
+        margin-top: 10px;
+        font-size: 16px;
+        color: #8c8c8c; }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .ranking-table {
@@ -468,8 +530,10 @@ template {
     .ranking-table > .partner-row.--labels {
       display: flex; }
     .ranking-table > .partner-row {
-      height: 120px;
+      height: 125px;
       padding: 0 20px 5px 20px; }
+      .ranking-table > .partner-row > .underline {
+        height: 5px; }
       .ranking-table > .partner-row > .image {
         min-width: 90px;
         height: 90px; }
@@ -481,18 +545,118 @@ template {
         text-transform: uppercase;
         margin-bottom: 5px; }
       .ranking-table > .partner-row > .information .tag, .ranking-table > .partner-row > .information .link {
-        font-size: 14px;
         display: flex; }
+      .ranking-table > .partner-row > .information .tag {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical; }
       .ranking-table > .partner-row > .rating {
         display: flex; }
-      .ranking-table > .partner-row > .score {
-        height: 100%; }
-        .ranking-table > .partner-row > .score .star-rating {
-          display: none; }
-      .ranking-table > .partner-row > .underline {
-        height: 5px; } }
+      .ranking-table > .partner-row > .score .number {
+        font-size: 38px; }
+      .ranking-table > .partner-row > .score .star-rating, .ranking-table > .partner-row > .score .ratings {
+        display: none; }
+      .ranking-table > .partner-row > .score .link {
+        display: flex; }
+      .ranking-table > .partner-row > .link {
+        width: 20%;
+        padding-left: 10px; }
+        .ranking-table > .partner-row > .link .arrow {
+          width: 40px;
+          height: 35px;
+          margin-bottom: 15px; }
+        .ranking-table > .partner-row > .link .text {
+          font-size: 12px;
+          text-transform: capitalize; } }
 @media (min-width: 1024px) {
-  .ranking-table .partner-row {
-    height: 180px; } }
+  .ranking-table {
+    padding: 40px 40px; }
+    .ranking-table > .partner-row {
+      height: 160px;
+      padding: 0 20px 5px 20px; }
+      .ranking-table > .partner-row.--labels .image, .ranking-table > .partner-row.--labels .information, .ranking-table > .partner-row.--labels .rating, .ranking-table > .partner-row.--labels .score, .ranking-table > .partner-row.--labels .link {
+        height: 25px; }
+        .ranking-table > .partner-row.--labels .image .label, .ranking-table > .partner-row.--labels .information .label, .ranking-table > .partner-row.--labels .rating .label, .ranking-table > .partner-row.--labels .score .label, .ranking-table > .partner-row.--labels .link .label {
+          font-size: 16px; }
+      .ranking-table > .partner-row .image, .ranking-table > .partner-row .information, .ranking-table > .partner-row .rating, .ranking-table > .partner-row .score, .ranking-table > .partner-row .link {
+        min-width: 14%; }
+      .ranking-table > .partner-row > .underline {
+        height: 5px; }
+      .ranking-table > .partner-row.--labels {
+        display: flex; }
+      .ranking-table > .partner-row > .image {
+        min-width: 100px;
+        height: 100px; }
+      .ranking-table > .partner-row > .information {
+        padding: 0 20px 0 20px; }
+        .ranking-table > .partner-row > .information .name {
+          font-size: 32px; }
+        .ranking-table > .partner-row > .information .membercount {
+          font-size: 15px;
+          text-transform: uppercase;
+          font-weight: bold;
+          margin-bottom: 5px; }
+        .ranking-table > .partner-row > .information .tag {
+          display: flex;
+          font-size: 16px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical; }
+        .ranking-table > .partner-row > .information .link {
+          display: flex;
+          font-size: 14px;
+          font-weight: bold; }
+      .ranking-table > .partner-row > .rating {
+        padding: 0 10px;
+        display: flex; }
+        .ranking-table > .partner-row > .rating .star-rating {
+          margin-bottom: 10px; }
+          .ranking-table > .partner-row > .rating .star-rating .star {
+            width: 22px;
+            height: 22px; }
+        .ranking-table > .partner-row > .rating .ratings {
+          font-size: 16px; }
+      .ranking-table > .partner-row > .score {
+        padding: 0 10px; }
+        .ranking-table > .partner-row > .score .number {
+          font-size: 68px; }
+        .ranking-table > .partner-row > .score .star-rating, .ranking-table > .partner-row > .score .ratings {
+          display: none; }
+        .ranking-table > .partner-row > .score .link {
+          font-size: 14px;
+          justify-content: center;
+          display: flex; }
+      .ranking-table > .partner-row > .link {
+        min-width: 16%;
+        padding-left: 20px; }
+        .ranking-table > .partner-row > .link > .arrow {
+          display: none; }
+        .ranking-table > .partner-row > .link .text {
+          margin-top: 24px;
+          color: white;
+          padding: 12px 20px;
+          background-color: #af4034;
+          border-radius: 100px;
+          display: flex;
+          align-items: center;
+          font-size: 16px;
+          font-weight: bold;
+          text-transform: uppercase;
+          text-decoration: none;
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25); }
+          .ranking-table > .partner-row > .link .text .arrow {
+            margin-top: 2px;
+            margin-right: -10px;
+            width: 10px;
+            height: 15px; }
+        .ranking-table > .partner-row > .link .name {
+          display: flex;
+          margin-top: 10px;
+          font-size: 16px;
+          color: #8c8c8c; } }
 
 /*# sourceMappingURL=main.css.map */
