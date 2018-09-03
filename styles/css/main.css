@@ -320,8 +320,14 @@ template {
 
 .ranking-table {
   padding: 10px;
-  background-color: #fff; }
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
   .ranking-table .partner-row {
+    width: 100%;
+    max-width: 1200px;
     position: relative;
     height: 80px;
     border-radius: 5px;
@@ -339,10 +345,18 @@ template {
       height: 60% !important; }
     .ranking-table .partner-row.--expand > .information {
       padding: 10px; }
+      .ranking-table .partner-row.--expand > .information .name {
+        white-space: normal;
+        overflow: unset; }
       .ranking-table .partner-row.--expand > .information .tag, .ranking-table .partner-row.--expand > .information .membercount {
         overflow: unset;
         text-overflow: inherit;
         -webkit-line-clamp: 99; }
+@-moz-document url-prefix() {
+  .ranking-table .partner-row.--expand > .information .tag, .ranking-table .partner-row.--expand > .information .membercount {
+    white-space: normal; } }
+      .ranking-table .partner-row.--expand > .information .info {
+        overflow: unset; }
     .ranking-table .partner-row.--labels {
       display: none;
       height: 20px !important;
@@ -378,16 +392,29 @@ template {
       display: none;
       position: absolute;
       left: -20px;
-      bottom: 40px;
+      bottom: 15%;
       background-color: transparent; }
+      .ranking-table .partner-row > .banner.--green .block {
+        background-color: #99C355; }
+      .ranking-table .partner-row > .banner.--green .triangle {
+        border-bottom-color: #99C355; }
+      .ranking-table .partner-row > .banner.--purple .block {
+        background-color: #7141A2; }
+      .ranking-table .partner-row > .banner.--purple .triangle {
+        border-bottom-color: #7141A2; }
+      .ranking-table .partner-row > .banner.--yellow .block {
+        background-color: #F8CA00; }
+      .ranking-table .partner-row > .banner.--yellow .triangle {
+        border-bottom-color: #F8CA00; }
       .ranking-table .partner-row > .banner .block {
         height: 24px;
         z-index: 1;
+        min-width: 135px;
         border-bottom-left-radius: 5px;
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: skyblue; }
+        background-color: #105CDD; }
         .ranking-table .partner-row > .banner .block .text {
           text-transform: capitalize;
           color: #fff;
@@ -401,7 +428,7 @@ template {
         width: 0;
         height: 0x;
         border-left: 20px solid transparent;
-        border-bottom: 20px solid skyblue;
+        border-bottom: 20px solid #105CDD;
         z-index: 0; }
         .ranking-table .partner-row > .banner .triangle.--overlay {
           z-index: 1;
@@ -441,7 +468,10 @@ template {
         width: 100%;
         height: 100%;
         cursor: pointer;
-        object-fit: contain; }
+        object-fit: contain;
+        transition: all 0.4s ease; }
+        .ranking-table .partner-row > .image img:hover {
+          opacity: 0.8; }
     .ranking-table .partner-row > .information {
       width: 100%;
       min-width: 100px;
@@ -457,7 +487,13 @@ template {
         margin-bottom: 5px;
         color: #333333;
         font-weight: bold;
-        font-size: 22px; }
+        font-size: 22px;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+        .ranking-table .partner-row > .information .name:hover {
+          color: #666666; }
       .ranking-table .partner-row > .information .membercount {
         transition: all 0.4s ease;
         color: #8c8c8c;
@@ -474,6 +510,12 @@ template {
         font-size: 14px;
         color: #333333;
         margin-bottom: 5px; }
+@-moz-document url-prefix() {
+  .ranking-table .partner-row > .information .tag {
+    display: block !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; } }
       .ranking-table .partner-row > .information .link {
         font-size: 13px;
         color: #af4034;
@@ -481,6 +523,8 @@ template {
         text-decoration: underline;
         text-transform: capitalize;
         cursor: pointer; }
+        .ranking-table .partner-row > .information .link:hover {
+          color: #d67d73; }
       .ranking-table .partner-row > .information .info {
         max-height: 0;
         overflow: hidden;
@@ -535,7 +579,8 @@ template {
       .ranking-table .partner-row > .score .star-rating {
         display: flex;
         flex-direction: row;
-        justify-content: center; }
+        justify-content: center;
+        margin-bottom: 5px; }
         .ranking-table .partner-row > .score .star-rating .star {
           margin: 0;
           width: 12px;
@@ -552,7 +597,10 @@ template {
         color: #af4034;
         font-weight: bold;
         text-decoration: underline;
-        text-transform: capitalize; }
+        text-transform: capitalize;
+        transition: all 0.4s ease; }
+        .ranking-table .partner-row > .score .link:hover {
+          color: #d67d73; }
     .ranking-table .partner-row > .link {
       width: 30%;
       display: flex;
@@ -570,7 +618,8 @@ template {
         font-weight: bold;
         text-transform: uppercase;
         color: #af4034;
-        text-decoration: underline; }
+        text-decoration: underline;
+        transition: all 0.4s ease; }
         .ranking-table .partner-row > .link .text > .arrow {
           display: none; }
       .ranking-table .partner-row > .link .name {
@@ -578,7 +627,10 @@ template {
         display: none;
         margin-top: 10px;
         font-size: 16px;
-        color: #8c8c8c; }
+        color: #8c8c8c;
+        transition: all 0.4s ease; }
+        .ranking-table .partner-row > .link .name:hover {
+          color: #595959; }
         .ranking-table .partner-row > .link .name > span {
           margin-left: 4px; }
 
@@ -642,23 +694,23 @@ template {
           text-transform: capitalize; } }
 @media (min-width: 1024px) {
   .hero-bg {
-    height: 200px; }
+    height: 160px; }
 
   .ranking-table {
     padding: 40px 40px; }
     .ranking-table > .partner-row {
-      height: 160px;
+      height: 140px;
       padding: 0 20px 5px 20px; }
       .ranking-table > .partner-row.--expand > .information {
         padding: 10px 20px; }
         .ranking-table > .partner-row.--expand > .information .info {
-          font-size: 16px; }
+          font-size: 14px; }
       .ranking-table > .partner-row.--labels {
         display: flex; }
         .ranking-table > .partner-row.--labels .image, .ranking-table > .partner-row.--labels .information, .ranking-table > .partner-row.--labels .rating, .ranking-table > .partner-row.--labels .score, .ranking-table > .partner-row.--labels .link {
           height: 25px; }
           .ranking-table > .partner-row.--labels .image .label, .ranking-table > .partner-row.--labels .information .label, .ranking-table > .partner-row.--labels .rating .label, .ranking-table > .partner-row.--labels .score .label, .ranking-table > .partner-row.--labels .link .label {
-            font-size: 16px; }
+            font-size: 14px; }
       .ranking-table > .partner-row > .banner.--show {
         display: flex; }
       .ranking-table > .partner-row > .underline {
@@ -669,15 +721,15 @@ template {
       .ranking-table > .partner-row > .information {
         padding: 10px 20px; }
         .ranking-table > .partner-row > .information .name {
-          font-size: 32px; }
+          font-size: 28px; }
         .ranking-table > .partner-row > .information .membercount {
-          font-size: 15px;
+          font-size: 14px;
           text-transform: uppercase;
           font-weight: bold;
           margin-bottom: 5px; }
         .ranking-table > .partner-row > .information .tag {
           display: flex;
-          font-size: 16px;
+          font-size: 14px;
           overflow: hidden;
           text-overflow: ellipsis;
           display: -webkit-box;
@@ -687,22 +739,21 @@ template {
           display: flex;
           font-size: 14px;
           font-weight: bold; }
-        .ranking-table > .partner-row > .information .info {
-          font-size: 16px; }
       .ranking-table > .partner-row > .rating {
         padding: 0 10px;
         display: flex; }
         .ranking-table > .partner-row > .rating .star-rating {
-          margin-bottom: 10px; }
+          margin-bottom: 10px;
+          margin-top: 20px; }
           .ranking-table > .partner-row > .rating .star-rating .star {
             width: 22px;
             height: 22px; }
         .ranking-table > .partner-row > .rating .ratings {
-          font-size: 16px; }
+          font-size: 14px; }
       .ranking-table > .partner-row > .score {
         padding: 0 10px; }
         .ranking-table > .partner-row > .score .number {
-          font-size: 68px; }
+          font-size: 56px; }
         .ranking-table > .partner-row > .score .star-rating, .ranking-table > .partner-row > .score .ratings {
           display: none; }
         .ranking-table > .partner-row > .score .link {
@@ -722,7 +773,7 @@ template {
           border-radius: 100px;
           display: flex;
           align-items: center;
-          font-size: 16px;
+          font-size: 14px;
           font-weight: bold;
           text-transform: uppercase;
           text-decoration: none;
@@ -732,10 +783,12 @@ template {
             margin-right: -10px;
             width: 10px;
             height: 15px; }
+          .ranking-table > .partner-row > .link .text:hover {
+            background-color: #d67d73; }
         .ranking-table > .partner-row > .link .name {
           display: flex;
           margin-top: 10px;
-          font-size: 16px;
+          font-size: 14px;
           color: #8c8c8c; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -9,8 +9,14 @@
 .ranking-table {
   padding: 10px;
   background-color: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   .partner-row {
+    width: 100%;
+    max-width: 1200px;
     position: relative;
     height: 80px;
     border-radius: 5px;
@@ -35,10 +41,22 @@
       > .information {
         padding: 10px;
 
+        .name {
+          white-space: normal;
+          overflow: unset;
+        }
+
         .tag, .membercount {
           overflow: unset;
           text-overflow: inherit;
           -webkit-line-clamp: 99;
+          @-moz-document url-prefix() {
+            white-space: normal;
+          }
+        }
+
+        .info {
+          overflow: unset;
         }
       }
     }
@@ -94,20 +112,46 @@
       display: none;
       position: absolute;
       left: -20px;
-      bottom: 40px;
+      bottom: 15%;
+      // bottom: 40px;
       background-color: transparent;
       // box-shadow: 0px 0px 10px rgba(175, 64, 52, 0.8);
+      &.--green {
+        .block {
+          background-color: $bannergreen;
+        }
+        .triangle {
+          border-bottom-color: $bannergreen;
+        }
+      }
+      &.--purple {
+        .block {
+          background-color: $bannerpurple;
+        }
+        .triangle {
+          border-bottom-color: $bannerpurple;
+        }
+      }
+      &.--yellow {
+        .block {
+          background-color: $banneryellow;
+        }
+        .triangle {
+          border-bottom-color: $banneryellow;
+        }
+      }
 
       .block {
         height: 24px;
         z-index: 1;
+        min-width: 135px;
         // border: 2px solid gold;
         border-bottom-left-radius: 5px;
         display: flex;
         align-items: center;
         justify-content: center;
         // box-shadow: 0px 0px 10px rgba(175, 64, 52, 0.8);
-        background-color: skyblue;
+        background-color: $bannerblue;
         .text {
           // border-radius:
           // padding: 4px 8px;
@@ -125,7 +169,7 @@
         width: 0;
         height: 0x;
         border-left: 20px solid transparent;
-        border-bottom: 20px solid skyblue;
+        border-bottom: 20px solid $bannerblue;
         z-index: 0;
 
         &.--overlay {
@@ -178,6 +222,10 @@
         height: 100%;
         cursor: pointer;
         object-fit: contain;
+        transition: all 0.4s ease;
+        &:hover {
+          opacity: 0.8;
+        }
       }
 
     }
@@ -200,6 +248,13 @@
         color: $black;
         font-weight: bold;
         font-size: 22px;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        &:hover {
+          color: lighten($black, 20%);
+        }
       }
 
       .membercount {
@@ -223,6 +278,12 @@
         font-size: 14px;
         color: $black;
         margin-bottom: 5px;
+        @-moz-document url-prefix() {
+          display: block !important;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
       }
 
       .link {
@@ -232,6 +293,9 @@
         text-decoration: underline;
         text-transform: capitalize;
         cursor: pointer;
+        &:hover {
+          color: lighten($red, 20%);
+        }
       }
 
       .info {
@@ -241,6 +305,7 @@
         font-size: 14px;
         color: $black;
         transition: max-height 0.4s ease;
+        // margin-bottom: 10px;
 
         ul li {
           padding-bottom: 8px;
@@ -308,6 +373,7 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
+        margin-bottom: 5px;
         .star {
           margin: 0;
           width: 12px;
@@ -330,6 +396,10 @@
         font-weight: bold;
         text-decoration: underline;
         text-transform: capitalize;
+        transition: all 0.4s ease;
+        &:hover {
+          color: lighten($red, 20%);
+        }
       }
     }
 
@@ -355,7 +425,7 @@
         text-transform: uppercase;
         color: $red;
         text-decoration: underline;
-
+        transition: all 0.4s ease;
         > .arrow {
           display: none;
         }
@@ -367,6 +437,10 @@
         margin-top: 10px;
         font-size: 16px;
         color: $grey;
+        transition: all 0.4s ease;
+        &:hover {
+          color: darken($grey, 20%);
+        }
 
         > span {
           margin-left: 4px;
@@ -492,14 +566,14 @@
 // Breakpoints Desktop =========================================================
 @include desktop {
   .hero-bg {
-    height: 200px;
+    height: 160px;
   }
 
   .ranking-table {
     padding: 40px 40px;
 
     > .partner-row {
-      height: 160px;
+      height: 140px;
       padding: 0 20px 5px 20px;
 
       // Expanded Styles
@@ -508,7 +582,7 @@
           padding: 10px 20px;
 
           .info {
-            font-size: 16px;
+            font-size: 14px;
           }
         }
       }
@@ -520,7 +594,7 @@
           height: 25px;
 
           .label {
-            font-size: 16px;
+            font-size: 14px;
           }
         }
       }
@@ -544,11 +618,11 @@
         padding: 10px 20px;
 
         .name {
-          font-size: 32px;
+          font-size: 28px;
         }
 
         .membercount {
-          font-size: 15px;
+          font-size: 14px;
           text-transform: uppercase;
           font-weight: bold;
           margin-bottom: 5px;
@@ -556,7 +630,7 @@
 
         .tag {
           display: flex;
-          font-size: 16px;
+          font-size: 14px;
           overflow: hidden;
           text-overflow: ellipsis;
           display: -webkit-box;
@@ -571,7 +645,7 @@
         }
 
         .info {
-          font-size: 16px;
+          // font-size: 16px;
         }
       }
 
@@ -581,6 +655,7 @@
 
         .star-rating {
           margin-bottom: 10px;
+          margin-top: 20px;
           .star {
             width: 22px;
             height: 22px;
@@ -588,7 +663,7 @@
         }
 
         .ratings {
-          font-size: 16px;
+          font-size: 14px;
         }
       }
 
@@ -596,7 +671,7 @@
         padding: 0 10px;
 
         .number {
-          font-size: 68px;
+          font-size: 56px;
         }
 
         .star-rating, .ratings {
@@ -627,7 +702,7 @@
           border-radius: 100px;
           display: flex;
           align-items: center;
-          font-size: 16px;
+          font-size: 14px;
           font-weight: bold;
           text-transform: uppercase;
           text-decoration: none;
@@ -641,12 +716,15 @@
             width: 10px;
             height: 15px;
           }
+          &:hover {
+            background-color: lighten($red, 20%);
+          }
         }
 
         .name {
           display: flex;
           margin-top: 10px;
-          font-size: 16px;
+          font-size: 14px;
           color: $grey;
         }
       }
