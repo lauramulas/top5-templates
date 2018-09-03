@@ -1,0 +1,91 @@
+
+.navbar {
+  font-size: 18px;
+  background-color: $darkgrey;
+  border: 1px solid $white;
+  padding-bottom: 10px;
+}
+
+#main-nav-1 {
+  list-style-type: none;
+  display: none;
+  flex-direction: column;
+}
+
+#main-nav-1 {
+  li {
+  text-align: center;
+  margin: 15px auto;
+  }
+}
+
+.nav-links {
+    text-decoration: none;
+    color: $red;
+}
+
+#logo {
+  text-decoration: none;
+  color: $red;
+}
+
+#logo:hover {
+  color: $darkgrey;
+}
+
+.nav-links:hover {
+  color: $darkgrey;
+}
+
+#logo {
+  display: inline-block;
+  font-size: 22px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+#navbar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: $darkgrey;
+  font-size: 24px;
+
+  &:hover {
+    color: $darkgrey;
+  }
+}
+// Breakpoints
+@include desktop {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 80px;
+    align-items: center;
+  }
+  #main-nav-1 {
+    display: flex !important;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  #main-nav-1 {
+      li {
+      margin: 0;
+    }
+    .right {
+      color: $darkgrey;
+    }
+    .nav-links {
+      margin-left: 40px;
+    }
+    #logo {
+      margin-top: 0;
+    }
+    #navbar-toggle {
+      display: none;
+    }
+  }
+}
