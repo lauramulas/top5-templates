@@ -1,7 +1,7 @@
 
 .navbar {
   font-size: 18px;
-  background-color: $darkgrey;
+  background-color: $grey;
   border: 1px solid $white;
   padding-bottom: 10px;
 }
@@ -30,11 +30,11 @@
 }
 
 #logo:hover {
-  color: $darkgrey;
+  color: $grey;
 }
 
 .nav-links:hover {
-  color: $darkgrey;
+  color: $grey;
 }
 
 #logo {
@@ -49,11 +49,11 @@
   top: 10px;
   right: 20px;
   cursor: pointer;
-  color: $darkgrey;
+  color: $grey;
   font-size: 24px;
 
   &:hover {
-    color: $darkgrey;
+    color: $grey;
   }
 }
 // Breakpoints
@@ -76,7 +76,7 @@
       margin: 0;
     }
     .right {
-      color: $darkgrey;
+      color: $grey;
     }
     .nav-links {
       margin-left: 40px;
