@@ -346,17 +346,13 @@ template {
     .ranking-table .partner-row.--expand > .information {
       padding: 10px; }
       .ranking-table .partner-row.--expand > .information .name {
-        white-space: normal;
-        overflow: unset; }
+        white-space: normal; }
       .ranking-table .partner-row.--expand > .information .tag, .ranking-table .partner-row.--expand > .information .membercount {
-        overflow: unset;
         text-overflow: inherit;
         -webkit-line-clamp: 99; }
 @-moz-document url-prefix() {
   .ranking-table .partner-row.--expand > .information .tag, .ranking-table .partner-row.--expand > .information .membercount {
     white-space: normal; } }
-      .ranking-table .partner-row.--expand > .information .info {
-        overflow: unset; }
     .ranking-table .partner-row.--labels {
       display: none;
       height: 20px !important;
@@ -484,7 +480,7 @@ template {
       .ranking-table .partner-row > .information .name {
         transition: all 0.4s ease;
         cursor: pointer;
-        margin-bottom: 5px;
+        padding-bottom: 5px;
         color: #333333;
         font-weight: bold;
         font-size: 22px;
@@ -503,6 +499,12 @@ template {
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical; }
+@-moz-document url-prefix() {
+  .ranking-table .partner-row > .information .membercount {
+    display: block !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; } }
       .ranking-table .partner-row > .information .tag, .ranking-table .partner-row > .information .link {
         transition: all 0.4s ease;
         display: none; }
@@ -699,7 +701,7 @@ template {
   .ranking-table {
     padding: 40px 40px; }
     .ranking-table > .partner-row {
-      height: 140px;
+      height: 150px;
       padding: 0 20px 5px 20px; }
       .ranking-table > .partner-row.--expand > .information {
         padding: 10px 20px; }
