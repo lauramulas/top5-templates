@@ -1,8 +1,9 @@
 //
-@import "base.scss";
 @import "mixins.scss";
+@import "base.scss";
 @import "reset.scss";
 
 // Components
 @import "components/ranking-table.scss";
 @import "components/navigation.scss";
+@import "components/nav-menu.scss";
