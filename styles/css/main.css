@@ -836,46 +836,6 @@ template {
   #logo:hover {
     color: #8c8c8c; }
 
-#navbar-toggle {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  cursor: pointer;
-  color: #8c8c8c;
-  font-size: 24px; }
-  #navbar-toggle:hover {
-    color: #8c8c8c; }
-
-@media (min-width: 1024px) {
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 0;
-    height: 65px;
-    align-items: center; }
-
-  .navbar #navbar-toggle {
-    display: none; }
-
-  #logo img {
-    width: 125px; }
-
-  #nav-menu {
-    display: flex !important;
-    margin-right: 30px;
-    flex-direction: row;
-    justify-content: flex-end; }
-
-  #nav-menu li {
-    margin: 0; }
-  #nav-menu .right {
-    color: #8c8c8c; }
-  #nav-menu .nav-links {
-    margin-left: 40px; }
-  #nav-menu #logo {
-    margin-top: 0; }
-  #nav-menu #navbar-toggle {
-    display: none; } }
 .nav-menu {
   display: flex;
   flex-direction: column;
@@ -928,3 +888,5 @@ template {
 @media (min-width: 1024px) {
   .nav-menu {
     display: none; } }
+
+/*# sourceMappingURL=main.css.map */
