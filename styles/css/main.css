@@ -793,10 +793,12 @@ template {
           font-size: 14px;
           color: #8c8c8c; } }
 .navbar {
+  height: 50px;
   font-size: 18px;
-  background-color: #8c8c8c;
+  background-color: #fff;
   border: 1px solid #fff;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  box-shadow: 5px 10px #8c8c8c; }
 
 #main-nav-1 {
   list-style-type: none;
@@ -806,6 +808,9 @@ template {
 #main-nav-1 li {
   text-align: center;
   margin: 15px auto; }
+
+.logo-image {
+  width: 120px !important; }
 
 .nav-links {
   text-decoration: none;
@@ -842,8 +847,14 @@ template {
     display: flex;
     justify-content: space-between;
     padding-bottom: 0;
-    height: 80px;
+    height: 65px;
     align-items: center; }
+
+  .navbar #navbar-toggle {
+    display: none; }
+
+  #logo img {
+    width: 125px; }
 
   #main-nav-1 {
     display: flex !important;

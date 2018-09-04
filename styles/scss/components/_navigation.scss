@@ -1,9 +1,12 @@
 
 .navbar {
+  height: 50px;
+
   font-size: 18px;
-  background-color: $grey;
+  background-color: $white;
   border: 1px solid $white;
   padding-bottom: 10px;
+  box-shadow: 5px 10px $grey;
 }
 
 #main-nav-1 {
@@ -17,6 +20,10 @@
   text-align: center;
   margin: 15px auto;
   }
+}
+
+.logo-image {
+  width: 120px !important;
 }
 
 .nav-links {
@@ -62,8 +69,18 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 0;
-    height: 80px;
+    height: 65px;
     align-items: center;
+  }
+  .navbar {
+    #navbar-toggle {
+      display: none;
+    }
+  }
+  #logo {
+    img {
+      width: 125px;
+    }
   }
   #main-nav-1 {
     display: flex !important;
