@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="19" fill="none" viewBox="0 0 21 19">
+    <path fill="none" d="M0-2.269h24.682v21.134H0z"/>
+    <path fill="none" d="M0 0h10.959v18.865H0z"/>
+    <path fill="#fff" fill-rule="evenodd" d="M5.48 9.524a4.043 4.043 0 1 0-.001-8.087 4.043 4.043 0 0 0 0 8.087zm0 1.437A5.48 5.48 0 1 0 5.478 0a5.48 5.48 0 0 0 0 10.96z" clip-rule="evenodd"/>
+    <rect width="1.312" height="8.619" x="4.823" y="10.245" fill="#fff" rx=".685"/>
+    <rect width="1.312" height="8.619" x="1.17" y="14.842" fill="#fff" rx=".685" transform="rotate(-90 1.17 14.842)"/>
+    <path fill="none" d="M3.594 5.48l7.75-7.749 13.339 13.34-7.75 7.749z"/>
+    <path fill="#fff" fill-rule="evenodd" d="M14.203 8.34a4.043 4.043 0 1 0-5.719-5.717 4.043 4.043 0 0 0 5.719 5.717zm1.016 1.016a5.48 5.48 0 1 0-7.75-7.75 5.48 5.48 0 0 0 7.75 7.75z" clip-rule="evenodd"/>
+    <rect width="1.312" height="8.619" x="14.249" y="9.314" fill="#fff" rx=".685" transform="rotate(-45 14.25 9.314)"/>
+    <rect width="1.312" height="8.619" x="14.916" y="15.148" fill="#fff" rx=".685" transform="rotate(-135 14.916 15.148)"/>
+</svg>

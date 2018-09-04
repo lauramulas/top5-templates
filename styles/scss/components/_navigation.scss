@@ -1,9 +1,30 @@
+// .navbar-header {
+//   height: 50px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//
+//   .burger {
+//     position: absolute;
+//
+//   }
+//
+//   .logo {
+//     object-fit: contain;
+//     height: 100%;
+//   }
+// }
+
+
+// =============================================================================
+// =============================================================================
 
 .navbar {
   font-size: 18px;
   background-color: $grey;
   border: 1px solid $white;
   padding-bottom: 10px;
+  position: relative;
 }
 
 #main-nav-1 {
