@@ -798,7 +798,8 @@ template {
   background-color: #fff;
   border: 1px solid #fff;
   padding-bottom: 10px;
-  box-shadow: 5px 10px #8c8c8c; }
+  box-shadow: 5px 10px #8c8c8c;
+  position: relative; }
 
 #main-nav-1 {
   list-style-type: none;

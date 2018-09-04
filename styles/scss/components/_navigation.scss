@@ -1,3 +1,23 @@
+// .navbar-header {
+//   height: 50px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//
+//   .burger {
+//     position: absolute;
+//
+//   }
+//
+//   .logo {
+//     object-fit: contain;
+//     height: 100%;
+//   }
+// }
+
+
+// =============================================================================
+// =============================================================================
 
 .navbar {
   height: 50px;
@@ -7,6 +27,8 @@
   border: 1px solid $white;
   padding-bottom: 10px;
   box-shadow: 5px 10px $grey;
+
+  position: relative;
 }
 
 #main-nav-1 {
