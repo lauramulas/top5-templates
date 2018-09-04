@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ranking Table</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles/css/main.css">
+</head>
+<body>
+
+  <!-- <div class="header">
+    <button class="button">open menu</button>
+  </div> -->
+
+  <nav class="navbar-header">
+
+    <span id="navbar-toggle">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="21" fill="none" viewBox="0 0 30 21">
+          <path fill="#000" fill-opacity="0" d="M0 0h30v21H0z"/>
+          <rect width="30" height="4" fill="#AF4034" rx="2"/>
+          <rect width="30" height="4" y="9" fill="#AF4034" rx="2"/>
+          <rect width="30" height="4" y="17" fill="#AF4034" rx="2"/>
+      </svg>
+    </span>
+
+    <div class="logo">
+      <a href="#" id="logo">
+        <img src="../assets/logo/top5-logo.png" alt="Top 5 Dating Sites">
+      </a>
+    </div>
+
+    <div class="nav-menu --large">
+      <div class="item"></div>
+
+    </div>
+
+    <!-- <ul class="nav-menu" class="with-indicator">
+        <li class="item">
+          <a href="#" class="link active">Top 5</a>
+        </li>
+        <li class="item">
+          <a href="#" class="link">Senioren Dating</a>
+        </li>
+        <li class="item">
+          <a href="#" class="link">Gay Dating</a>
+        </li>
+        <li class="item">
+          <a href="#" class="link">Lesbian Dating</a>
+        </li>
+        <li class="item">
+          <a href="#" class="link">Vergleich</a>
+        </li>
+        <li class="item">
+          <a href="#" class="link">Artikel</a>
+        </li>
+    </ul>
+    <ul class="nav-menu-right">
+      <li class="item">
+        <a href="#" class="link grey">Über uns</a>
+      </li>
+      <li class="item">
+        <a href="#" class="link grey">FAQ</a>
+      </li>
+    </ul> -->
+  </nav>
+
+  <div class="nav-menu --mobile">
+    <div class="item">
+      <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="23" fill="none" viewBox="0 0 20 23">
+            <path fill="none" d="M0 0h20v23H0z"/>
+            <path fill="#fff" d="M14 15h6v8h-6zM7 10h6v13H7zM0 13h6v10H0zM10 0l.898 2.764h2.906l-2.35 1.708.897 2.764L10 5.528 7.649 7.236l.898-2.764-2.351-1.708h2.906L10 0z"/>
+        </svg>
+      </div>
+      <div class="link"><a href="#">Top 5</a></div>
+      <div class="arrow">
+        <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75736 0.696698L12.5303 5.46967C12.8232 5.76256 12.8232 6.23744 12.5303 6.53033L7.75736 11.3033C7.46447 11.5962 6.98959 11.5962 6.6967 11.3033C6.40381 11.0104 6.40381 10.5355 6.6967 10.2426L10.1893 6.75H0V5.25H10.1893L6.6967 1.75736C6.40381 1.46446 6.40381 0.989591 6.6967 0.696698C6.98959 0.403805 7.46447 0.403805 7.75736 0.696698Z" fill="white"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="none" viewBox="0 0 20 16">
+            <path fill="#fff" d="M.107 5.514c.657 3.106 3.507 5.921 6.004 8.388.649.641 1.274 1.258 1.83 1.851a.79.79 0 0 0 1.148 0c.12-.129.245-.259.372-.39-.457-.472-.95-.96-1.458-1.46C5.506 11.434 2.656 8.62 2 5.513 1.503 3.17 2.78.724 4.786.134 1.772-.697-.532 2.492.107 5.513zM10.513.795c1.105-.668 2.157-.78 3.061-.514-.717.198-1.475.623-2.243 1.333l-.818-.819z"/>
+            <path fill="#fff" d="M10.78 15.753c-.557-.593-1.182-1.21-1.83-1.85-2.498-2.468-5.348-5.283-6.005-8.389-.846-4.001 3.47-8.296 7.759-3.162a.856.856 0 0 0 1.298 0c4.29-5.134 8.605-.84 7.759 3.162-.086.408-.21.81-.366 1.207a11.16 11.16 0 0 1-1.13 2.11c-1.182 1.769-2.837 3.42-4.375 4.94l-.133.131c-.649.641-1.274 1.258-1.83 1.851a.79.79 0 0 1-1.148 0z"/>
+        </svg>
+      </div>
+      <div class="link"><a href="#">Senioren Dating</a></div>
+      <div class="arrow">
+        <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75736 0.696698L12.5303 5.46967C12.8232 5.76256 12.8232 6.23744 12.5303 6.53033L7.75736 11.3033C7.46447 11.5962 6.98959 11.5962 6.6967 11.3033C6.40381 11.0104 6.40381 10.5355 6.6967 10.2426L10.1893 6.75H0V5.25H10.1893L6.6967 1.75736C6.40381 1.46446 6.40381 0.989591 6.6967 0.696698C6.98959 0.403805 7.46447 0.403805 7.75736 0.696698Z" fill="white"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19" fill="none" viewBox="0 0 21 19">
+            <path fill="none" d="M0 0h20.524v19H0z"/>
+            <path fill="#fff" fill-rule="evenodd" d="M15.49 5.524a4.076 4.076 0 1 1-8.153 0 4.076 4.076 0 0 1 8.152 0zm-.656 4.338a5.524 5.524 0 1 1 .83-.809l3.702 3.704V8.943a.58.58 0 1 1 1.159 0v5.212c0 .32-.26.58-.58.58h-5.211a.58.58 0 0 1 0-1.159h3.814l-3.714-3.714z" clip-rule="evenodd"/>
+            <path fill="#fff" fill-rule="evenodd" d="M9.597 5.523a4.075 4.075 0 1 1-8.15.001 4.075 4.075 0 0 1 8.15 0zm-3.198 5.454A5.524 5.524 0 0 0 5.522 0a5.523 5.523 0 0 0-.448 11.029v5.708l-3.087-3.086a.663.663 0 1 0-.937.937l4.218 4.218a.663.663 0 0 0 .937 0l4.218-4.218a.663.663 0 0 0-.937-.937l-3.087 3.086v-5.76z" clip-rule="evenodd"/>
+        </svg>
+      </div>
+      <div class="link"><a href="#">Gay Dating</a></div>
+      <div class="arrow">
+        <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75736 0.696698L12.5303 5.46967C12.8232 5.76256 12.8232 6.23744 12.5303 6.53033L7.75736 11.3033C7.46447 11.5962 6.98959 11.5962 6.6967 11.3033C6.40381 11.0104 6.40381 10.5355 6.6967 10.2426L10.1893 6.75H0V5.25H10.1893L6.6967 1.75736C6.40381 1.46446 6.40381 0.989591 6.6967 0.696698C6.98959 0.403805 7.46447 0.403805 7.75736 0.696698Z" fill="white"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19" fill="none" viewBox="0 0 21 19">
+            <path fill="none" d="M0-2.269h24.682v21.134H0z"/>
+            <path fill="none" d="M0 0h10.959v18.865H0z"/>
+            <path fill="#fff" fill-rule="evenodd" d="M5.48 9.524a4.043 4.043 0 1 0-.001-8.087 4.043 4.043 0 0 0 0 8.087zm0 1.437A5.48 5.48 0 1 0 5.478 0a5.48 5.48 0 0 0 0 10.96z" clip-rule="evenodd"/>
+            <rect width="1.312" height="8.619" x="4.823" y="10.245" fill="#fff" rx=".685"/>
+            <rect width="1.312" height="8.619" x="1.17" y="14.842" fill="#fff" rx=".685" transform="rotate(-90 1.17 14.842)"/>
+            <path fill="none" d="M3.594 5.48l7.75-7.749 13.339 13.34-7.75 7.749z"/>
+            <path fill="#fff" fill-rule="evenodd" d="M14.203 8.34a4.043 4.043 0 1 0-5.719-5.717 4.043 4.043 0 0 0 5.719 5.717zm1.016 1.016a5.48 5.48 0 1 0-7.75-7.75 5.48 5.48 0 0 0 7.75 7.75z" clip-rule="evenodd"/>
+            <rect width="1.312" height="8.619" x="14.249" y="9.314" fill="#fff" rx=".685" transform="rotate(-45 14.25 9.314)"/>
+            <rect width="1.312" height="8.619" x="14.916" y="15.148" fill="#fff" rx=".685" transform="rotate(-135 14.916 15.148)"/>
+        </svg>
+
+      </div>
+      <div class="link"><a href="#">Lesbian Dating</a></div>
+      <div class="arrow">
+        <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75736 0.696698L12.5303 5.46967C12.8232 5.76256 12.8232 6.23744 12.5303 6.53033L7.75736 11.3033C7.46447 11.5962 6.98959 11.5962 6.6967 11.3033C6.40381 11.0104 6.40381 10.5355 6.6967 10.2426L10.1893 6.75H0V5.25H10.1893L6.6967 1.75736C6.40381 1.46446 6.40381 0.989591 6.6967 0.696698C6.98959 0.403805 7.46447 0.403805 7.75736 0.696698Z" fill="white"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" fill="none" viewBox="0 0 16 24">
+            <path fill="none" d="M0 0h16v24H0z"/>
+            <path fill="#fff" fill-rule="evenodd" d="M2 2h2v2h8V2h2a2 2 0 0 1 2 2v18a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm4.707 4.707l-3.353 3.354L2 8.707 2.707 8l.647.646L6 6l.707.707zM8 8.5h6v-1H8v1zm-1.293 4.207l-3.353 3.354L2 14.707 2.707 14l.647.646L6 12l.707.707zM8 14.5h6v-1H8v1zm-1.293 4.207l-3.353 3.354L2 20.707 2.707 20l.647.646L6 18l.707.707zM8 20.5h6v-1H8v1z" clip-rule="evenodd"/>
+            <path fill="#fff" fill-rule="evenodd" d="M9 1h2v2H5V1h2a1 1 0 0 1 2 0z" clip-rule="evenodd"/>
+        </svg>
+      </div>
+      <div class="link"><a href="#">Vergleich</a></div>
+      <div class="arrow">
+        <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75736 0.696698L12.5303 5.46967C12.8232 5.76256 12.8232 6.23744 12.5303 6.53033L7.75736 11.3033C7.46447 11.5962 6.98959 11.5962 6.6967 11.3033C6.40381 11.0104 6.40381 10.5355 6.6967 10.2426L10.1893 6.75H0V5.25H10.1893L6.6967 1.75736C6.40381 1.46446 6.40381 0.989591 6.6967 0.696698C6.98959 0.403805 7.46447 0.403805 7.75736 0.696698Z" fill="white"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" fill="none" viewBox="0 0 18 19">
+            <path fill="#fff" fill-rule="evenodd" d="M0 0h16v18.05a1 1 0 0 0 1-1V1.9h1V17a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V0zm7 3H1v5h6V3zm1 0h7v1H8V3zm2-2H1v1h9V1zm1 0h4v1h-4V1zM8 15H1v1h7v-1zm-7 2h7v1H2a1 1 0 0 1-1-1zm14 0H9v1h6v-1zm-6-6h6v5H9v-5zm6-6H8v1h7V5zM8 7h7v1H8V7zm7 2H1v1h14V9zM1 11h7v1H1v-1zm7 2H1v1h7v-1z" clip-rule="evenodd"/>
+        </svg>
+      </div>
+      <div class="link"><a href="#">Artikel</a></div>
+      <div class="arrow">
+        <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75736 0.696698L12.5303 5.46967C12.8232 5.76256 12.8232 6.23744 12.5303 6.53033L7.75736 11.3033C7.46447 11.5962 6.98959 11.5962 6.6967 11.3033C6.40381 11.0104 6.40381 10.5355 6.6967 10.2426L10.1893 6.75H0V5.25H10.1893L6.6967 1.75736C6.40381 1.46446 6.40381 0.989591 6.6967 0.696698C6.98959 0.403805 7.46447 0.403805 7.75736 0.696698Z" fill="white"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 18 18">
+            <path fill="#fff" fill-rule="evenodd" d="M9 18A9 9 0 1 0 9 0a9 9 0 0 0 0 18zm-.437-4.5c.812 0 1.346-.3 1.6-.9-.336-.016-.505-.252-.505-.708 0-.208.07-.608.21-1.2l.75-3.792-3.143.313c-.108.01-.124.16-.021.194l.865.282c-.093.386-.233.91-.383 1.47-.339 1.272-.727 2.727-.727 3.177 0 .248.111.496.333.744.262.28.603.42 1.021.42zm.172-8.748a.806.806 0 0 0-.393.72c0 .312.119.548.356.708.247.16.563.24.948.24.386 0 .706-.08.96-.24A.778.778 0 0 0 11 5.472c0-.312-.119-.552-.357-.72-.23-.168-.537-.252-.923-.252s-.714.084-.985.252z" clip-rule="evenodd"/>
+        </svg>
+      </div>
+      <div class="link"><a href="#">Über uns</a></div>
+      <div class="arrow">
+        <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75736 0.696698L12.5303 5.46967C12.8232 5.76256 12.8232 6.23744 12.5303 6.53033L7.75736 11.3033C7.46447 11.5962 6.98959 11.5962 6.6967 11.3033C6.40381 11.0104 6.40381 10.5355 6.6967 10.2426L10.1893 6.75H0V5.25H10.1893L6.6967 1.75736C6.40381 1.46446 6.40381 0.989591 6.6967 0.696698C6.98959 0.403805 7.46447 0.403805 7.75736 0.696698Z" fill="white"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 18 18">
+            <path fill="#fff" fill-rule="evenodd" d="M9 18A9 9 0 1 0 9 0a9 9 0 0 0 0 18zm1.869-13.396c-.476-.327-1.125-.49-1.946-.49-.476 0-.92.075-1.33.224-.401.14-.793.299-1.176.476l.546 1.106c.205-.093.383-.177.532-.252a3.398 3.398 0 0 1 .798-.294c.13-.028.27-.042.42-.042.327 0 .588.093.784.28.196.187.294.453.294.798 0 .28-.103.57-.308.868-.205.29-.434.602-.686.938-.252.336-.48.705-.686 1.106a2.877 2.877 0 0 0-.308 1.33l1.176.322c.103-.345.257-.677.462-.994.215-.317.453-.64.714-.966.168-.205.336-.415.504-.63.177-.224.331-.448.462-.672.14-.233.252-.471.336-.714.084-.252.126-.513.126-.784 0-.747-.238-1.283-.714-1.61zm-1.638 7.462c-.177-.196-.43-.294-.756-.294-.345 0-.607.107-.784.322a1.116 1.116 0 0 0-.266.756c0 .28.084.523.252.728.177.205.43.308.756.308.355 0 .62-.103.798-.308.177-.205.266-.457.266-.756 0-.308-.089-.56-.266-.756z" clip-rule="evenodd"/>
+        </svg>
+      </div>
+      <div class="link"><a href="#">FAQ</a></div>
+      <div class="arrow">
+        <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75736 0.696698L12.5303 5.46967C12.8232 5.76256 12.8232 6.23744 12.5303 6.53033L7.75736 11.3033C7.46447 11.5962 6.98959 11.5962 6.6967 11.3033C6.40381 11.0104 6.40381 10.5355 6.6967 10.2426L10.1893 6.75H0V5.25H10.1893L6.6967 1.75736C6.40381 1.46446 6.40381 0.989591 6.6967 0.696698C6.98959 0.403805 7.46447 0.403805 7.75736 0.696698Z" fill="white"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="body-overlay"></div>
+
+  <div class="hero-bg"></div>
+
+  <div class="ranking-table">
+    <div class="partner-row --labels">
+      <div class="image"><p class="label">Partner</p></div>
+      <div class="information"><p class="label">info</p></div>
+      <div class="rating">
+        <p class="label">rating</p>
+        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="6" height="10" fill="none" viewBox="0 0 6 10">
+            <path fill="#fff" d="M3 0l3 3.712H0L3 0zM3 9.897L0 6.186h6L3 9.897z"/>
+        </svg>
+      </div>
+      <div class="score">
+        <p class="label">score</p>
+        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="6" height="10" fill="none" viewBox="0 0 6 10">
+            <path fill="#fff" d="M3 0l3 3.712H0L3 0zM3 9.897L0 6.186h6L3 9.897z"/>
+        </svg>
+      </div>
+      <div class="link"><p class="label">link</p></div>
+    </div>
+
+    <div class="partner-row --toprank">
+      <!-- banner -->
+      <div class="banner --show --green">
+        <div class="block">
+          <span class="text">most popular choice</span>
+        </div>
+        <div class="cap"></div>
+        <div class="triangle --overlay"></div>
+        <div class="triangle"></div>
+      </div>
+
+      <div class="image"><img src="../assets/partners/parship.png" alt="Parship Dating"></div>
+      <div class="information">
+        <p class="name">Parship</p>
+        <p class="membercount">Mehr als 5 Millionen Mitglieder europaweit</p>
+        <!-- Tablet & Desktop only -->
+        <p class="tag">Interessante Singles, die es ernst meinen</p>
+        <div class="info">
+          <ul>
+            <li>Die beliebteste Partnervermittlung der Schweiz und im deutschsprachigen Raum</li>
+            <li>Wissenschaftlich basiertes Matching</li>
+            <li>38 Prozent Erfolgsquote</li>
+            <li>TÜV-geprüft</li>
+          </ul>
+        </div>
+
+        <p class="link">read more</p>
+
+
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Tablet & Desktop only -->
+      <div class="rating">
+        <div class="star-rating">
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+        </div>
+        <p class="ratings">Bewerten (9545)</p>
+        <div class="divider"></div>
+      </div>
+
+      <div class="score">
+        <p class="number">9.8</p>
+        <div class="star-rating">
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+        </div>
+        <p class="ratings">Bewerten (9545)</p>
+        <p class="link">Lies unsere Bewertung</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="link">
+        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="none" viewBox="0 0 16 14">
+            <path fill="#AF4034" fill-rule="evenodd" d="M8.881.278l6.05 6.05a.95.95 0 0 1 0 1.344l-6.05 6.05a.95.95 0 0 1-1.344-1.345l4.427-4.426H0V6.049h11.964L7.537 1.623A.95.95 0 0 1 8.881.278z" clip-rule="evenodd"/>
+        </svg>
+        <div class="text">
+          seite besuchen
+          <svg class="arrow" width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.38904 7L0.826535 13.4952L0.826535 0.504809L7.38904 7Z" fill="white"/>
+          </svg>
+          <!-- <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="none" viewBox="0 0 16 14">
+              <path fill="#FFF" fill-rule="evenodd" d="M8.881.278l6.05 6.05a.95.95 0 0 1 0 1.344l-6.05 6.05a.95.95 0 0 1-1.344-1.345l4.427-4.426H0V6.049h11.964L7.537 1.623A.95.95 0 0 1 8.881.278z" clip-rule="evenodd"/>
+          </svg> -->
+        </div>
+        <div class="name">Parship <span>»</span></div>
+      </div>
+
+      <div class="underline"></div>
+    </div>
+
+    <div class="partner-row">
+      <!-- banner -->
+      <div class="banner">
+        <div class="block">
+          <span class="text">most popular choice</span>
+        </div>
+        <div class="cap"></div>
+        <div class="triangle --overlay"></div>
+        <div class="triangle"></div>
+      </div>
+
+      <div class="image"><img src="../assets/partners/edarling.png" alt="eDarling Dating"></div>
+      <div class="information">
+        <p class="name">eDarling</p>
+        <p class="membercount">Fast 15 Mio. Mitglieder europaweit</p>
+        <!-- Tablet & Desktop only -->
+        <p class="tag">Der Testsieger: beste Partnervermittlung im deutschsprachigen Raum (FOCUS 2014, 2015, 2016)</p>
+        <div class="info">
+          <ul>
+            <li>Treffen Sie Singles im besten Alter aus der Schweiz10 Jahre Erfahrung - seriöser Anbieter für Dating</li>
+            <li>10 Jahre Erfahrung - seriöser Anbieter für Dating</li>
+            <li>Einzigartige Features für höchste Erfolgschancen</li>
+            <li>Jetzt kostenlos Basis Mitglied werden!</li>
+          </ul>
+        </div>
+
+        <p class="link">read more</p>
+
+
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Tablet & Desktop only -->
+      <div class="rating">
+        <div class="star-rating">
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+        </div>
+        <p class="ratings">Bewerten (9545)</p>
+        <div class="divider"></div>
+      </div>
+
+      <div class="score">
+        <p class="number">9.4</p>
+        <div class="star-rating">
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+        </div>
+        <p class="ratings">Bewerten (9545)</p>
+        <p class="link">Lies unsere Bewertung</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="link">
+        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="none" viewBox="0 0 16 14">
+            <path fill="#AF4034" fill-rule="evenodd" d="M8.881.278l6.05 6.05a.95.95 0 0 1 0 1.344l-6.05 6.05a.95.95 0 0 1-1.344-1.345l4.427-4.426H0V6.049h11.964L7.537 1.623A.95.95 0 0 1 8.881.278z" clip-rule="evenodd"/>
+        </svg>
+        <div class="text">
+          seite besuchen
+          <svg class="arrow" width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.38904 7L0.826535 13.4952L0.826535 0.504809L7.38904 7Z" fill="white"/>
+          </svg>
+          <!-- <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="none" viewBox="0 0 16 14">
+              <path fill="#FFF" fill-rule="evenodd" d="M8.881.278l6.05 6.05a.95.95 0 0 1 0 1.344l-6.05 6.05a.95.95 0 0 1-1.344-1.345l4.427-4.426H0V6.049h11.964L7.537 1.623A.95.95 0 0 1 8.881.278z" clip-rule="evenodd"/>
+          </svg> -->
+        </div>
+        <div class="name">eDarling <span>»</span></div>
+      </div>
+
+      <div class="underline"></div>
+    </div>
+
+    <div class="partner-row">
+      <!-- banner -->
+      <div class="banner">
+        <div class="block">
+          <span class="text">most popular choice</span>
+        </div>
+        <div class="cap"></div>
+        <div class="triangle --overlay"></div>
+        <div class="triangle"></div>
+      </div>
+
+      <div class="image"><img src="../assets/partners/be2.png" alt="Be2 Dating"></div>
+      <div class="information">
+        <p class="name">Be2</p>
+        <p class="membercount">30 Millionen Mitglieder weltweit</p>
+        <!-- Tablet & Desktop only -->
+        <p class="tag">Einfach und direkt den richtigen Partner finden!</p>
+        <div class="info">
+          <ul>
+            <li>100% kostenlose Partnerempfehlungen</li>
+            <li>Unkomplizierte Partnersuche</li>
+            <li>Schnelle Anmeldung</li>
+          </ul>
+        </div>
+
+        <p class="link">read more</p>
+
+
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Tablet & Desktop only -->
+      <div class="rating">
+        <div class="star-rating">
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+        </div>
+        <p class="ratings">Bewerten (9545)</p>
+        <div class="divider"></div>
+      </div>
+
+      <div class="score">
+        <p class="number">9.3</p>
+        <div class="star-rating">
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+        </div>
+        <p class="ratings">Bewerten (9545)</p>
+        <p class="link">Lies unsere Bewertung</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="link">
+        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="none" viewBox="0 0 16 14">
+            <path fill="#AF4034" fill-rule="evenodd" d="M8.881.278l6.05 6.05a.95.95 0 0 1 0 1.344l-6.05 6.05a.95.95 0 0 1-1.344-1.345l4.427-4.426H0V6.049h11.964L7.537 1.623A.95.95 0 0 1 8.881.278z" clip-rule="evenodd"/>
+        </svg>
+        <div class="text">
+          seite besuchen
+          <svg class="arrow" width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.38904 7L0.826535 13.4952L0.826535 0.504809L7.38904 7Z" fill="white"/>
+          </svg>
+          <!-- <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="none" viewBox="0 0 16 14">
+              <path fill="#FFF" fill-rule="evenodd" d="M8.881.278l6.05 6.05a.95.95 0 0 1 0 1.344l-6.05 6.05a.95.95 0 0 1-1.344-1.345l4.427-4.426H0V6.049h11.964L7.537 1.623A.95.95 0 0 1 8.881.278z" clip-rule="evenodd"/>
+          </svg> -->
+        </div>
+        <div class="name">Be2 <span> »</span></div>
+      </div>
+
+      <div class="underline"></div>
+    </div>
+
+    <div class="partner-row">
+      <!-- banner -->
+      <div class="banner">
+        <div class="block">
+          <span class="text">most popular choice</span>
+        </div>
+        <div class="cap"></div>
+        <div class="triangle --overlay"></div>
+        <div class="triangle"></div>
+      </div>
+
+      <div class="image"><img src="../assets/partners/c-date.png" alt="C-date Dating"></div>
+      <div class="information">
+        <p class="name">C-date</p>
+        <p class="membercount">Mehr als 53 Mio. Mitglieder in Europa</p>
+        <!-- Tablet & Desktop only -->
+        <p class="tag">Lebe die Lust auf Abenteuer und erotische Erlebnisse</p>
+        <div class="info">
+          <ul>
+            <li>Höchste erfolgschancen bei Casual Dates</li>
+            <li>100% Anonymität und Sicherheit</li>
+            <li>„Mehr als nur ein Date“ versprochen</li>
+          </ul>
+        </div>
+
+        <p class="link">read more</p>
+
+
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Tablet & Desktop only -->
+      <div class="rating">
+        <div class="star-rating">
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+        </div>
+        <p class="ratings">Bewerten (9545)</p>
+        <div class="divider"></div>
+      </div>
+
+      <div class="score">
+        <p class="number">8.7</p>
+        <div class="star-rating">
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+        </div>
+        <p class="ratings">Bewerten (9545)</p>
+        <p class="link">Lies unsere Bewertung</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="link">
+        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="none" viewBox="0 0 16 14">
+            <path fill="#AF4034" fill-rule="evenodd" d="M8.881.278l6.05 6.05a.95.95 0 0 1 0 1.344l-6.05 6.05a.95.95 0 0 1-1.344-1.345l4.427-4.426H0V6.049h11.964L7.537 1.623A.95.95 0 0 1 8.881.278z" clip-rule="evenodd"/>
+        </svg>
+        <div class="text">
+          seite besuchen
+          <svg class="arrow" width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.38904 7L0.826535 13.4952L0.826535 0.504809L7.38904 7Z" fill="white"/>
+          </svg>
+          <!-- <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="none" viewBox="0 0 16 14">
+              <path fill="#FFF" fill-rule="evenodd" d="M8.881.278l6.05 6.05a.95.95 0 0 1 0 1.344l-6.05 6.05a.95.95 0 0 1-1.344-1.345l4.427-4.426H0V6.049h11.964L7.537 1.623A.95.95 0 0 1 8.881.278z" clip-rule="evenodd"/>
+          </svg> -->
+        </div>
+        <div class="name">C-date <span> »</span></div>
+      </div>
+
+      <div class="underline"></div>
+    </div>
+
+    <div class="partner-row">
+      <!-- banner -->
+      <div class="banner">
+        <div class="block">
+          <span class="text">most popular choice</span>
+        </div>
+        <div class="cap"></div>
+        <div class="triangle --overlay"></div>
+        <div class="triangle"></div>
+      </div>
+
+      <div class="image"><img src="../assets/partners/zoosk.png" alt="C-date Dating"></div>
+      <div class="information">
+        <p class="name">Zoosk</p>
+        <p class="membercount">Mehr als 27 Mio. Singles weltweit</p>
+        <!-- Tablet & Desktop only -->
+        <p class="tag">Online Dating auf smarte Art</p>
+        <div class="info">
+          <ul>
+            <li>Beste App für Android und iPhone</li>
+            <li>Benutzerfreundlich</li>
+            <li>Sehr hohe Erfolgschancen</li>
+            <li>Text- und Video-Chat</li>
+          </ul>
+        </div>
+
+        <p class="link">read more</p>
+
+
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Tablet & Desktop only -->
+      <div class="rating">
+        <div class="star-rating">
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+        </div>
+        <p class="ratings">Bewerten (9545)</p>
+        <div class="divider"></div>
+      </div>
+
+      <div class="score">
+        <p class="number">8.3</p>
+        <div class="star-rating">
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+        </div>
+        <p class="ratings">Bewerten (9545)</p>
+        <p class="link">Lies unsere Bewertung</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="link">
+        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="none" viewBox="0 0 16 14">
+            <path fill="#AF4034" fill-rule="evenodd" d="M8.881.278l6.05 6.05a.95.95 0 0 1 0 1.344l-6.05 6.05a.95.95 0 0 1-1.344-1.345l4.427-4.426H0V6.049h11.964L7.537 1.623A.95.95 0 0 1 8.881.278z" clip-rule="evenodd"/>
+        </svg>
+        <div class="text">
+          seite besuchen
+          <svg class="arrow" width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.38904 7L0.826535 13.4952L0.826535 0.504809L7.38904 7Z" fill="white"/>
+          </svg>
+          <!-- <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="none" viewBox="0 0 16 14">
+              <path fill="#FFF" fill-rule="evenodd" d="M8.881.278l6.05 6.05a.95.95 0 0 1 0 1.344l-6.05 6.05a.95.95 0 0 1-1.344-1.345l4.427-4.426H0V6.049h11.964L7.537 1.623A.95.95 0 0 1 8.881.278z" clip-rule="evenodd"/>
+          </svg> -->
+        </div>
+        <div class="name">Zoosk <span> »</span></div>
+      </div>
+
+      <div class="underline"></div>
+    </div>
+
+    <div class="partner-row">
+      <!-- banner -->
+      <div class="banner --show">
+        <div class="block">
+          <span class="text">Singles Over 50</span>
+        </div>
+        <div class="cap"></div>
+        <div class="triangle --overlay"></div>
+        <div class="triangle"></div>
+      </div>
+
+      <div class="image"><img src="../assets/partners/singles50.png" alt="Singles 50 Dating"></div>
+      <div class="information">
+        <p class="name">Singles 50 long long title babay wo wooo</p>
+        <p class="membercount">Über 2 Millionen Singles in Deutschland</p>
+        <!-- Tablet & Desktop only -->
+        <p class="tag">Die neue Datingseite für Singles über 50 !</p>
+        <div class="info">
+          <ul>
+            <li>Gratis Registrierung</li>
+            <li>Lokale Treffen</li>
+          </ul>
+        </div>
+
+        <p class="link">read more</p>
+
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Tablet & Desktop only -->
+      <div class="rating">
+        <div class="star-rating">
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+        </div>
+        <p class="ratings">Bewerten (9545)</p>
+        <div class="divider"></div>
+      </div>
+
+      <div class="score">
+        <p class="number">8.3</p>
+        <div class="star-rating">
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 9 9">
+              <path fill="#F8CA00" d="M4.5 0l1.062 3.152H9L6.219 5.1 7.28 8.252 4.5 6.304 1.719 8.252 2.78 5.1 0 3.152h3.438L4.5 0z"/>
+          </svg>
+        </div>
+        <p class="ratings">Bewerten (9545)</p>
+        <p class="link">Lies unsere Bewertung</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="link">
+        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="none" viewBox="0 0 16 14">
+            <path fill="#AF4034" fill-rule="evenodd" d="M8.881.278l6.05 6.05a.95.95 0 0 1 0 1.344l-6.05 6.05a.95.95 0 0 1-1.344-1.345l4.427-4.426H0V6.049h11.964L7.537 1.623A.95.95 0 0 1 8.881.278z" clip-rule="evenodd"/>
+        </svg>
+        <div class="text">
+          seite besuchen
+          <svg class="arrow" width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.38904 7L0.826535 13.4952L0.826535 0.504809L7.38904 7Z" fill="white"/>
+          </svg>
+          <!-- <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="none" viewBox="0 0 16 14">
+              <path fill="#FFF" fill-rule="evenodd" d="M8.881.278l6.05 6.05a.95.95 0 0 1 0 1.344l-6.05 6.05a.95.95 0 0 1-1.344-1.345l4.427-4.426H0V6.049h11.964L7.537 1.623A.95.95 0 0 1 8.881.278z" clip-rule="evenodd"/>
+          </svg> -->
+        </div>
+        <div class="name">Singles 50<span> »</span></div>
+      </div>
+
+      <div class="underline"></div>
+    </div>
+
+  </div>
+
+
+  <script src="../scripts/nav-menu.js" charset="utf-8"></script>
+  <script src="../scripts/main.js" charset="utf-8"></script>
+</body>
+</html>

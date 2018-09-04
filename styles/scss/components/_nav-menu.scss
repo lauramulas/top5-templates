@@ -1,0 +1,81 @@
+// mobile nav menu
+.nav-menu.--mobile {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: $red;
+
+  transition: max-height 0.4s ease;
+  max-height: 0;
+
+  > .item {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: 50px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.4s ease;
+    position: relative;
+    &:hover {
+      background-color: lighten($red, 20%);
+    }
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+
+    .icon {
+      width: 40px;
+    }
+
+    .link {
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      padding-bottom: 2px;
+      > a {
+        color: $white;
+      }
+    }
+
+    .arrow {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      justify-self: flex-end;
+    }
+  }
+}
+
+// tablet desktop
+.nav-menu.--large {
+
+}
+
+.body-overlay {
+  // pointer-events: none;
+  transition: opacity .4s ease;
+  position: absolute;
+  z-index: 1;
+  background-color: $black;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// Breakpoints Tablet =========================================================
+@include tablet {
+  .nav-menu {
+    // display: none;
+  }
+}
+
+// Breakpoints Desktop =========================================================
+@include desktop {
+  .nav-menu {
+    display: none;
+  }
+}
