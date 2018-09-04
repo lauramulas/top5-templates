@@ -31,6 +31,7 @@ readmoreBtn.forEach(function(el, i) {
     // Subtract pre height, and current height elements from each other to get true height value
     var height = (x - preX) + (y - preY) + (z - preZ);
 
+
     // var newX = rowHeight - height;
 
     console.log("name = " + x)
@@ -44,8 +45,6 @@ readmoreBtn.forEach(function(el, i) {
     console.log("row height = " + rowHeight);
     console.log("content height = " + content.scrollHeight);
 
-    // ============================================================
-    // ============================================================
 
     if (content.style.maxHeight) {
       content.style.maxHeight = null
