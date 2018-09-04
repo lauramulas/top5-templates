@@ -741,9 +741,74 @@ template {
           display: flex;
           font-size: 14px;
           font-weight: bold; }
+
+  .ranking-table > .partner-row > .score .number {
+        font-size: 38px; }
+      .ranking-table > .partner-row > .score .star-rating, .ranking-table > .partner-row > .score .ratings {
+        display: none; }
+      .ranking-table > .partner-row > .score .link {
+        display: flex; }
+      .ranking-table > .partner-row > .link {
+        width: 20%;
+        padding-left: 10px; }
+        .ranking-table > .partner-row > .link .arrow {
+          width: 40px;
+          height: 35px;
+          margin-bottom: 15px; }
+        .ranking-table > .partner-row > .link .text {
+          font-size: 12px;
+          text-transform: capitalize; } }
+@media (min-width: 1024px) {
+  .hero-bg {
+    height: 160px; }
+
+  .ranking-table {
+    padding: 40px 40px; }
+    .ranking-table > .partner-row {
+      height: 150px;
+      padding: 0 20px 5px 20px; }
+      .ranking-table > .partner-row.--expand > .information {
+        padding: 10px 20px; }
+        .ranking-table > .partner-row.--expand > .information .info {
+          font-size: 14px; }
+      .ranking-table > .partner-row.--labels {
+        display: flex; }
+        .ranking-table > .partner-row.--labels .image, .ranking-table > .partner-row.--labels .information, .ranking-table > .partner-row.--labels .rating, .ranking-table > .partner-row.--labels .score, .ranking-table > .partner-row.--labels .link {
+          height: 25px; }
+          .ranking-table > .partner-row.--labels .image .label, .ranking-table > .partner-row.--labels .information .label, .ranking-table > .partner-row.--labels .rating .label, .ranking-table > .partner-row.--labels .score .label, .ranking-table > .partner-row.--labels .link .label {
+            font-size: 14px; }
+      .ranking-table > .partner-row > .banner.--show {
+        display: flex; }
+      .ranking-table > .partner-row > .underline {
+        height: 5px; }
+      .ranking-table > .partner-row > .image {
+        min-width: 100px;
+        height: 100px; }
+      .ranking-table > .partner-row > .information {
+        padding: 10px 20px; }
+        .ranking-table > .partner-row > .information .name {
+          font-size: 28px; }
+        .ranking-table > .partner-row > .information .membercount {
+          font-size: 14px;
+          text-transform: uppercase;
+          font-weight: bold;
+          margin-bottom: 5px; }
+        .ranking-table > .partner-row > .information .tag {
+          display: flex;
+          font-size: 14px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical; }
+        .ranking-table > .partner-row > .information .link {
+          display: flex;
+          font-size: 14px;
+          font-weight: bold; }
       .ranking-table > .partner-row > .rating {
         padding: 0 10px;
         display: flex; }
+
         .ranking-table > .partner-row > .rating .star-rating {
           margin-bottom: 10px;
           margin-top: 20px; }
@@ -792,6 +857,7 @@ template {
           margin-top: 10px;
           font-size: 14px;
           color: #8c8c8c; } }
+
 .navbar-header {
   height: 50px;
   font-size: 18px;
@@ -873,5 +939,6 @@ template {
     margin-top: 0; }
   #nav-menu #navbar-toggle {
     display: none; } }
+
 
 /*# sourceMappingURL=main.css.map */

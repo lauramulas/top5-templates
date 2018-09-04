@@ -32,6 +32,20 @@ readmoreBtn.forEach(function(el, i) {
     var height = (x - preX) + (y - preY) + (z - preZ);
 
 
+    // var newX = rowHeight - height;
+
+    console.log("name = " + x)
+    console.log("pre name = " + preX)
+    console.log("membercount = " + y)
+    console.log("pre membercount = " + preY)
+    console.log("pre tag = " + preZ)
+    console.log("tag = " + z)
+
+    console.log("information height = " + height);
+    console.log("row height = " + rowHeight);
+    console.log("content height = " + content.scrollHeight);
+
+
     if (content.style.maxHeight) {
       content.style.maxHeight = null
       parentRow.style.height = rowHeight + "px"
