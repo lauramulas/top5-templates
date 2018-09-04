@@ -1,6 +1,6 @@
 // console.log('hi');
 
-var button = document.querySelector('.button');
+var button = document.querySelector('#navbar-toggle');
 var navMenu = document.querySelector('.nav-menu');
 var bodyOverlay = document.querySelector('.body-overlay');
 
@@ -17,16 +17,3 @@ button.addEventListener('click', function(){
     bodyOverlay.style.opacity = 0.8;
   }
 })
-
-
-// if (content.style.maxHeight) {
-//   content.style.maxHeight = null
-//
-//
-//
-// } else {
-//   content.style.maxHeight = content.scrollHeight + "px";
-//
-//
-//
-// }

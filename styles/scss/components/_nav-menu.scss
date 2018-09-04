@@ -1,4 +1,5 @@
-.nav-menu {
+// mobile nav menu
+.nav-menu.--mobile {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -49,6 +50,11 @@
   }
 }
 
+// tablet desktop
+.nav-menu.--large {
+
+}
+
 .body-overlay {
   // pointer-events: none;
   transition: opacity .4s ease;
@@ -63,7 +69,7 @@
 // Breakpoints Tablet =========================================================
 @include tablet {
   .nav-menu {
-    display: none;
+    // display: none;
   }
 }
 
