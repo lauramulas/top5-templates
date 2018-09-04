@@ -1,4 +1,4 @@
-let mainNav=document.getElementById('main-nav-1');
+let mainNav=document.getElementById('nav-menu');
 let navbarToggle=document.getElementById('navbar-toggle');
 
 navbarToggle.addEventListener('click',function(){

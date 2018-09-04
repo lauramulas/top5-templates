@@ -792,23 +792,30 @@ template {
           margin-top: 10px;
           font-size: 14px;
           color: #8c8c8c; } }
-.navbar {
+.navbar-header {
   height: 50px;
   font-size: 18px;
   background-color: #fff;
   border: 1px solid #fff;
-  padding-bottom: 10px;
-  box-shadow: 5px 10px #8c8c8c;
-  position: relative; }
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 1; }
+  .navbar-header #logo {
+    height: 100%;
+    width: auto; }
+    .navbar-header #logo img {
+      height: 100%; }
 
-#main-nav-1 {
+#nav-menu {
+  margin: 0;
+  padding: 0; }
+
+#nav-menu {
   list-style-type: none;
-  display: none;
   flex-direction: column; }
 
-#main-nav-1 li {
-  text-align: center;
-  margin: 15px auto; }
+#nav-menu li {
+  text-align: center; }
 
 .logo-image {
   width: 120px !important; }
@@ -817,21 +824,14 @@ template {
   text-decoration: none;
   color: #af4034; }
 
-#logo {
-  text-decoration: none;
-  color: #af4034; }
-
-#logo:hover {
-  color: #8c8c8c; }
-
 .nav-links:hover {
   color: #8c8c8c; }
 
 #logo {
-  display: inline-block;
   font-size: 22px;
-  margin-top: 10px;
-  margin-left: 20px; }
+  color: #af4034; }
+  #logo:hover {
+    color: #8c8c8c; }
 
 #navbar-toggle {
   position: absolute;
@@ -857,21 +857,21 @@ template {
   #logo img {
     width: 125px; }
 
-  #main-nav-1 {
+  #nav-menu {
     display: flex !important;
     margin-right: 30px;
     flex-direction: row;
     justify-content: flex-end; }
 
-  #main-nav-1 li {
+  #nav-menu li {
     margin: 0; }
-  #main-nav-1 .right {
+  #nav-menu .right {
     color: #8c8c8c; }
-  #main-nav-1 .nav-links {
+  #nav-menu .nav-links {
     margin-left: 40px; }
-  #main-nav-1 #logo {
+  #nav-menu #logo {
     margin-top: 0; }
-  #main-nav-1 #navbar-toggle {
+  #nav-menu #navbar-toggle {
     display: none; } }
 
 /*# sourceMappingURL=main.css.map */

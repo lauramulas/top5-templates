@@ -19,28 +19,44 @@
 // =============================================================================
 // =============================================================================
 
-.navbar {
+.navbar-header {
   height: 50px;
 
   font-size: 18px;
   background-color: $white;
   border: 1px solid $white;
-  padding-bottom: 10px;
-  box-shadow: 5px 10px $grey;
+  // padding-bottom: 10px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 
   position: relative;
+  z-index: 1;
+
+  #logo {
+     height: 100%;
+     width: auto;
+
+    img {
+       height: 100%;
+    }
+  }
+
 }
 
-#main-nav-1 {
+#nav-menu {
+  margin: 0;
+  padding: 0;
+}
+
+#nav-menu {
   list-style-type: none;
-  display: none;
+  // display: none;
   flex-direction: column;
 }
 
-#main-nav-1 {
+#nav-menu {
   li {
   text-align: center;
-  margin: 15px auto;
+  // margin: 15px auto;
   }
 }
 
@@ -53,24 +69,28 @@
     color: $red;
 }
 
-#logo {
-  text-decoration: none;
-  color: $red;
-}
+// #logo {
+//   text-decoration: none;
+//   color: $red;
+// }
 
-#logo:hover {
-  color: $grey;
-}
+
 
 .nav-links:hover {
   color: $grey;
 }
 
 #logo {
-  display: inline-block;
+  // display: inline-block;
   font-size: 22px;
-  margin-top: 10px;
-  margin-left: 20px;
+  // margin-top: 10px;
+  // margin-left: 20px;
+  // text-decoration: none;
+  color: $red;
+
+  &:hover {
+    color: $grey;
+  }
 }
 
 #navbar-toggle {
@@ -104,13 +124,13 @@
       width: 125px;
     }
   }
-  #main-nav-1 {
+  #nav-menu {
     display: flex !important;
     margin-right: 30px;
     flex-direction: row;
     justify-content: flex-end;
   }
-  #main-nav-1 {
+  #nav-menu {
       li {
       margin: 0;
     }
