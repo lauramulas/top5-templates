@@ -4,6 +4,11 @@
 @import "reset.scss";
 
 // Components
+@import "components/article-list.scss";
+@import "components/article-view.scss";
 @import "components/ranking-table.scss";
-@import "components/navigation.scss";
+@import "components/navbar-header.scss";
 @import "components/nav-menu.scss";
+
+// Developer styles
+@import "_devstyles.scss";

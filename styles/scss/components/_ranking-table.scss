@@ -2,11 +2,25 @@
   height: 100px;
   background-color: $red;
   position: absolute;
+  // top: 50px;
+  left: 0;
   width: 100%;
   transition: all 0.4s ease;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+
+  .title {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+  }
 }
 
 .ranking-table {
+  margin-top: 50px;
   padding: 10px;
   background-color: $white;
   display: flex;
@@ -93,10 +107,15 @@
           cursor: pointer;
         }
         .arrow {
-          cursor: pointer;
-          height: 15px;
-          width: 15px;
-          margin-left: 5px;
+          margin-left: 8px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 14px;
+
+          .up, .down {
+            height: 5px;
+          }
         }
       }
     }
@@ -113,9 +132,8 @@
       position: absolute;
       left: -20px;
       bottom: 15%;
-      // bottom: 40px;
+      z-index: 1;
       background-color: transparent;
-      // box-shadow: 0px 0px 10px rgba(175, 64, 52, 0.8);
       &.--green {
         .block {
           background-color: $bannergreen;
@@ -145,16 +163,12 @@
         height: 24px;
         z-index: 1;
         min-width: 135px;
-        // border: 2px solid gold;
         border-bottom-left-radius: 5px;
         display: flex;
         align-items: center;
         justify-content: center;
-        // box-shadow: 0px 0px 10px rgba(175, 64, 52, 0.8);
         background-color: $bannerblue;
         .text {
-          // border-radius:
-          // padding: 4px 8px;
           text-transform: capitalize;
           color: $white;
           font-weight: bold;
@@ -307,12 +321,10 @@
       .info {
         max-height: 0;
         overflow: hidden;
-        margin-left: -20px;
+        // margin-left: -20px;
         font-size: 14px;
         color: $black;
         transition: max-height 0.4s ease;
-        // margin-bottom: 10px;
-
         ul li {
           padding-bottom: 8px;
         }
@@ -461,28 +473,30 @@
 // Breakpoints Tablet ==========================================================
 @include tablet {
   .hero-bg {
-    height: 120px;
+    top: 50px;
+    height: 180px;
+    justify-content: center;
+    padding: 0 20px;
+
+    .title {
+      width: 100%;
+      text-align: left;
+      margin-top: 30px;
+      font-size: 20px;
+    }
   }
 
   .ranking-table {
+    margin-top: 110px;
     padding: 20px;
 
     > .partner-row.--labels {
       display: flex;
-
-      .rating, .score{
-        .arrow {
-          height: 12px;
-          width: 12px;
-          margin-left: 5px;
-        }
-      }
     }
 
     > .partner-row {
       height: 130px;
       padding: 0 20px 5px 20px;
-
 
       > .underline {
         height: 5px;
@@ -496,7 +510,6 @@
 
       // Partner Info
       > .information {
-
         .name {
           font-size: 28px;
         }
@@ -506,7 +519,6 @@
           font-weight: bold;
           text-transform: uppercase;
           margin-bottom: 5px;
-
           overflow: hidden;
           text-overflow: ellipsis;
           display: -webkit-box;
@@ -534,9 +546,9 @@
 
       // Our Score
       > .score {
-
         .number {
           font-size: 38px;
+          margin-bottom: 5px;
         }
 
         .star-rating, .ratings {
@@ -546,18 +558,28 @@
         .link {
           display: flex;
         }
-
       }
 
       // Partner Website Link
       > .link {
         width: 20%;
         padding-left: 10px;
+        &:hover {
+          .arrow {
+            opacity: 0.7;
+          }
+
+          .text {
+            color: lighten($red, 20%);
+          }
+
+        }
 
         .arrow {
           width: 40px;
           height: 35px;
           margin-bottom: 15px;
+          transition: opacity 0.4s ease;
         }
 
         .text {
@@ -572,10 +594,22 @@
 // Breakpoints Desktop =========================================================
 @include desktop {
   .hero-bg {
-    height: 160px;
+    top: 50px;
+    height: 180px;
+    justify-content: center;
+    padding: 0 40px;
+
+    .title {
+      width: 100%;
+      max-width: 1200px;
+      text-align: left;
+      margin-top: 30px;
+      font-size: 22px;
+    }
   }
 
   .ranking-table {
+    margin-top: 100px;
     padding: 40px 40px;
 
     > .partner-row {
@@ -649,10 +683,6 @@
           font-size: 14px;
           font-weight: bold;
         }
-
-        .info {
-          // font-size: 16px;
-        }
       }
 
       > .rating {
@@ -701,9 +731,9 @@
         }
 
         .text {
-          margin-top: 24px;
+          margin-top: 15px;
           color: white;
-          padding: 12px 20px;
+          padding: 15px 20px;
           background-color: $red;
           border-radius: 100px;
           display: flex;
@@ -712,9 +742,7 @@
           font-weight: bold;
           text-transform: uppercase;
           text-decoration: none;
-
           box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
-          // box-shadow: 0px 0px 20px rgba(175, 64, 52, 0.8);
 
           .arrow {
             margin-top: 2px;

@@ -8,8 +8,6 @@ readmoreBtn.forEach(function(el, i) {
   var rowHeight = parentRow.scrollHeight;
 
 
-
-
   el.addEventListener('click', function(){
 
     // Calculate height of Partner information elements before expanding
@@ -30,21 +28,6 @@ readmoreBtn.forEach(function(el, i) {
 
     // Subtract pre height, and current height elements from each other to get true height value
     var height = (x - preX) + (y - preY) + (z - preZ);
-
-
-    // var newX = rowHeight - height;
-
-    console.log("name = " + x)
-    console.log("pre name = " + preX)
-    console.log("membercount = " + y)
-    console.log("pre membercount = " + preY)
-    console.log("pre tag = " + preZ)
-    console.log("tag = " + z)
-
-    console.log("information height = " + height);
-    console.log("row height = " + rowHeight);
-    console.log("content height = " + content.scrollHeight);
-
 
     if (content.style.maxHeight) {
       content.style.maxHeight = null

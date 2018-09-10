@@ -1,0 +1,32 @@
+// Backend developer stlyes go here :)
+
+.ranking-table .partner-row > .score .star-rating {
+  display: none;
+}
+
+.ranking-table .partner-row > .score .link a {
+  text-align: center;
+  font-size: 13px;
+  color: #af4034;
+  font-weight: bold;
+  text-decoration: underline;
+  text-transform: capitalize;
+  transition: all 0.4s ease;
+}
+.ranking-table .partner-row > .score .link a:hover {
+  color: #d67d73;
+}
+
+.navbar-header #logo img {
+  height: 85%;
+  // margin: 3px 0;
+}
+
+@media (max-width: 767px) {
+  .ranking-table .partner-row > .score .star-rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+}
